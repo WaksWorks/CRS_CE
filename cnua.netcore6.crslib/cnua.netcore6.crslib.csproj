@@ -65,7 +65,7 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="FS\WhatsApp Chat with CrsExempR.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
