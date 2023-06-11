@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>waksworks.crslib</id>
+    <version>1.0.0</version>
+    <title>Chatroom Studio by WaksWorks™</title>
+    <authors>Wakeelu Mamudu</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">Artistic-1.0</license>
+    <licenseUrl>https://licenses.nuget.org/Artistic-1.0</licenseUrl>
+    <icon>favico.png</icon>
+    <readme>readme.md</readme>
+    <description>chatroom studio library</description>
+    <releaseNotes>prototype version 2023 summer</releaseNotes>
+    <copyright>© 2023 WaksWorks All Rights Reserved</copyright>
+    <tags>whatsapp-export chatroom-speech chatroom-media chatroom-app</tags>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="CsvHelper" version="30.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Hosting" version="7.0.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.CommandLine" version="2.0.0-beta4.22272.1" exclude="Build,Analyzers" />
+        <dependency id="System.Speech" version="7.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/net6.0/favicon.ico" buildAction="Content" />
+      <files include="any/net6.0/FS/WhatsApp Chat with CrsExempR.txt" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\bin\Debug\net6.0\crs.runtimeconfig.json" target="lib\net6.0\crs.runtimeconfig.json" />
+    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\bin\Debug\net6.0\crs.dll" target="lib\net6.0\crs.dll" />
+    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\favicon.ico" target="content\favicon.ico" />
+    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\favicon.ico" target="contentFiles\any\net6.0\favicon.ico" />
+    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\FS\WhatsApp Chat with CrsExempR.txt" target="content\FS\WhatsApp Chat with CrsExempR.txt" />
+    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\FS\WhatsApp Chat with CrsExempR.txt" target="contentFiles\any\net6.0\FS\WhatsApp Chat with CrsExempR.txt" />
+    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\favico.png" target="\favico.png" />
+    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\readme.md" target="\readme.md" />
+  </files>
+</package>

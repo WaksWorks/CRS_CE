@@ -1,0 +1,845 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>crs.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:CSR.Abstract.Fakes.ShimMarshall`1">
+            <summary>Shim type of CSR.Abstract.Marshall&lt;T&gt;</summary>
+        </member>
+        <member name="M:CSR.Abstract.Fakes.ShimMarshall`1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:CSR.Abstract.Fakes.ShimMarshall`1.#ctor(CSR.Abstract.Marshall{`0})">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:CSR.Abstract.Fakes.ShimMarshall`1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:CSR.Abstract.Fakes.ShimMarshall`1.AllInstances.GetEnumerator">
+            <summary>Sets the Shim of Marshall`1.GetEnumerator(Marshall`1 this)</summary>
+        </member>
+        <member name="P:CSR.Abstract.Fakes.ShimMarshall`1.AllInstances.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the Shim of Marshall`1.System.Collections.IEnumerable.GetEnumerator(Marshall`1 this)</summary>
+        </member>
+        <member name="M:CSR.Abstract.Fakes.ShimMarshall`1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CSR.Abstract.Fakes.ShimMarshall`1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Abstract.Fakes.ShimMarshall`1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CSR.Abstract.Fakes.ShimMarshall`1.Bind(System.Collections.IEnumerable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:CSR.Abstract.Fakes.ShimMarshall`1.Bind(System.Collections.Generic.IEnumerable{`0})">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:CSR.Abstract.Fakes.ShimMarshall`1.Constructor">
+            <summary>Sets the Shim of Marshall`1.Marshall`1(Marshall`1 this)</summary>
+        </member>
+        <member name="P:CSR.Abstract.Fakes.ShimMarshall`1.GetEnumerator">
+            <summary>Sets the Shim of Marshall`1.GetEnumerator(Marshall`1 this)</summary>
+        </member>
+        <member name="P:CSR.Abstract.Fakes.ShimMarshall`1.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the Shim of Marshall`1.System.Collections.IEnumerable.GetEnumerator(Marshall`1 this)</summary>
+        </member>
+        <member name="T:CSR.Abstract.Fakes.StubMarshall`1">
+            <summary>Stub type of CSR.Abstract.Marshall&lt;T&gt;</summary>
+        </member>
+        <member name="M:CSR.Abstract.Fakes.StubMarshall`1.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:CSR.Abstract.Fakes.StubMarshall`1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:CSR.Abstract.Fakes.StubMarshall`1.InitializeStub">
+            <summary>Initializes a new instance of type StubMarshall</summary>
+        </member>
+        <member name="P:CSR.Abstract.Fakes.StubMarshall`1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:CSR.Abstract.Fakes.StubMarshall`1.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension">
+            <summary>Shim type of CSR.Entities.Extensions.ChatRoom_Extension</summary>
+        </member>
+        <member name="M:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.GetPostFragString">
+            <summary>Sets the Shim of ChatRoom_Extension.GetPostFrag(String row)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.GetPostString">
+            <summary>Sets the Shim of ChatRoom_Extension.GetPost(String row)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.IsDateString">
+            <summary>Sets the Shim of ChatRoom_Extension.IsDate(String row)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.IsNotSystemPostString">
+            <summary>Sets the Shim of ChatRoom_Extension.IsNotSystemPost(String row)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.LoadChatRoomString">
+            <summary>Sets the Shim of ChatRoom_Extension.Load(ChatRoom cr, String exportFilePath)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.ToDateString">
+            <summary>Sets the Shim of ChatRoom_Extension.ToDate(String row)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.ToFilteredRowsStringArray">
+            <summary>Sets the Shim of ChatRoom_Extension.ToFilteredRows(String[] rows)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.ToPost2String">
+            <summary>Sets the Shim of ChatRoom_Extension.ToPost2(String row)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.ToPostString">
+            <summary>Sets the Shim of ChatRoom_Extension.ToPost(String row)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimChatRoom_Extension.WriteRowsCSVChatRoom">
+            <summary>Sets the Shim of ChatRoom_Extension.WriteRowsCSV(ChatRoom cr)</summary>
+        </member>
+        <member name="T:CSR.Entities.Extensions.Fakes.ShimPost_Entities_Extensions">
+            <summary>Shim type of CSR.Entities.Extensions.Post_Entities_Extensions</summary>
+        </member>
+        <member name="M:CSR.Entities.Extensions.Fakes.ShimPost_Entities_Extensions.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Extensions.Fakes.ShimPost_Entities_Extensions.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CSR.Entities.Extensions.Fakes.ShimPost_Entities_Extensions.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimPost_Entities_Extensions.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimPost_Entities_Extensions.WriteCSVPostArrayString">
+            <summary>Sets the Shim of Post_Entities_Extensions.WriteCSV(Post[] posts, String filePath)</summary>
+        </member>
+        <member name="T:CSR.Entities.Extensions.Fakes.ShimPost_Extension">
+            <summary>Shim type of CSR.Entities.Extensions.Post_Extension</summary>
+        </member>
+        <member name="M:CSR.Entities.Extensions.Fakes.ShimPost_Extension.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Extensions.Fakes.ShimPost_Extension.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CSR.Entities.Extensions.Fakes.ShimPost_Extension.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimPost_Extension.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimPost_Extension.ToRowPost">
+            <summary>Sets the Shim of Post_Extension.ToRow(Post post)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimPost_Extension.ToWaveFilesPostArrayFileInfo">
+            <summary>Sets the Shim of Post_Extension.ToWaveFiles(Post[] posts, FileInfo outputPath)</summary>
+        </member>
+        <member name="P:CSR.Entities.Extensions.Fakes.ShimPost_Extension.WriteWavePost">
+            <summary>Sets the Shim of Post_Extension.WriteWave(Post post)</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.ShimAudioWave">
+            <summary>Shim type of CSR.Entities.AudioWave</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimAudioWave.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimAudioWave.#ctor(CSR.Entities.AudioWave)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.ShimAudioWave.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AllInstances.AudioWaveConfigGet">
+            <summary>Sets the Shim of AudioWave.get_AudioWaveConfig(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AllInstances.AudioWaveConfigSetString">
+            <summary>Sets the Shim of AudioWave.set_AudioWaveConfig(AudioWave this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AllInstances.AudioWaveGuidGet">
+            <summary>Sets the Shim of AudioWave.get_AudioWaveGuid(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AllInstances.AudioWaveGuidSetNullableOfGuid">
+            <summary>Sets the Shim of AudioWave.set_AudioWaveGuid(AudioWave this, Nullable`1 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AllInstances.AudioWaveIdGet">
+            <summary>Sets the Shim of AudioWave.get_AudioWaveId(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AllInstances.AudioWaveIdSetInt32">
+            <summary>Sets the Shim of AudioWave.set_AudioWaveId(AudioWave this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AllInstances.VoiceinfoGet">
+            <summary>Sets the Shim of AudioWave.get_Voiceinfo(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AllInstances.VoiceinfoSetVoiceInfo">
+            <summary>Sets the Shim of AudioWave.set_Voiceinfo(AudioWave this, VoiceInfo value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AllInstances.WaveStreamGet">
+            <summary>Sets the Shim of AudioWave.get_WaveStream(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AllInstances.WaveStreamSetFileStream">
+            <summary>Sets the Shim of AudioWave.set_WaveStream(AudioWave this, FileStream value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AudioWaveConfigGet">
+            <summary>Sets the Shim of AudioWave.get_AudioWaveConfig(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AudioWaveConfigSetString">
+            <summary>Sets the Shim of AudioWave.set_AudioWaveConfig(AudioWave this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AudioWaveGuidGet">
+            <summary>Sets the Shim of AudioWave.get_AudioWaveGuid(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AudioWaveGuidSetNullableOfGuid">
+            <summary>Sets the Shim of AudioWave.set_AudioWaveGuid(AudioWave this, Nullable`1 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AudioWaveIdGet">
+            <summary>Sets the Shim of AudioWave.get_AudioWaveId(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.AudioWaveIdSetInt32">
+            <summary>Sets the Shim of AudioWave.set_AudioWaveId(AudioWave this, Int32 value)</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimAudioWave.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimAudioWave.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.Constructor">
+            <summary>Sets the Shim of AudioWave.AudioWave(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.VoiceinfoGet">
+            <summary>Sets the Shim of AudioWave.get_Voiceinfo(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.VoiceinfoSetVoiceInfo">
+            <summary>Sets the Shim of AudioWave.set_Voiceinfo(AudioWave this, VoiceInfo value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.WaveStreamGet">
+            <summary>Sets the Shim of AudioWave.get_WaveStream(AudioWave this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimAudioWave.WaveStreamSetFileStream">
+            <summary>Sets the Shim of AudioWave.set_WaveStream(AudioWave this, FileStream value)</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.ShimChatImport">
+            <summary>Shim type of CSR.Entities.ChatImport</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimChatImport.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimChatImport.#ctor(CSR.Entities.ChatImport)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.ShimChatImport.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.AllInstances.ChatImportGuidGet">
+            <summary>Sets the Shim of ChatImport.get_ChatImportGuid(ChatImport this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.AllInstances.ChatImportGuidSetGuid">
+            <summary>Sets the Shim of ChatImport.set_ChatImportGuid(ChatImport this, Guid value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.AllInstances.ChatImportIdGet">
+            <summary>Sets the Shim of ChatImport.get_ChatImportId(ChatImport this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.AllInstances.ChatImportIdSetInt32">
+            <summary>Sets the Shim of ChatImport.set_ChatImportId(ChatImport this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.AllInstances.ChatRoomGet">
+            <summary>Sets the Shim of ChatImport.get_ChatRoom(ChatImport this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.AllInstances.ChatRoomSetChatRoom">
+            <summary>Sets the Shim of ChatImport.set_ChatRoom(ChatImport this, ChatRoom value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.AllInstances.ChatRowsGet">
+            <summary>Sets the Shim of ChatImport.get_ChatRows(ChatImport this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.AllInstances.ChatRowsSetICollectionOfString">
+            <summary>Sets the Shim of ChatImport.set_ChatRows(ChatImport this, ICollection`1 value)</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimChatImport.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimChatImport.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.ChatImportGuidGet">
+            <summary>Sets the Shim of ChatImport.get_ChatImportGuid(ChatImport this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.ChatImportGuidSetGuid">
+            <summary>Sets the Shim of ChatImport.set_ChatImportGuid(ChatImport this, Guid value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.ChatImportIdGet">
+            <summary>Sets the Shim of ChatImport.get_ChatImportId(ChatImport this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.ChatImportIdSetInt32">
+            <summary>Sets the Shim of ChatImport.set_ChatImportId(ChatImport this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.ChatRoomGet">
+            <summary>Sets the Shim of ChatImport.get_ChatRoom(ChatImport this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.ChatRoomSetChatRoom">
+            <summary>Sets the Shim of ChatImport.set_ChatRoom(ChatImport this, ChatRoom value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.ChatRowsGet">
+            <summary>Sets the Shim of ChatImport.get_ChatRows(ChatImport this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.ChatRowsSetICollectionOfString">
+            <summary>Sets the Shim of ChatImport.set_ChatRows(ChatImport this, ICollection`1 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatImport.Constructor">
+            <summary>Sets the Shim of ChatImport.ChatImport(ChatImport this)</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.ShimChatRoom">
+            <summary>Shim type of CSR.Entities.ChatRoom</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimChatRoom.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimChatRoom.#ctor(CSR.Entities.ChatRoom)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.ShimChatRoom.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.ChatRoomGuidGet">
+            <summary>Sets the Shim of ChatRoom.get_ChatRoomGuid(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.ChatRoomGuidSetGuid">
+            <summary>Sets the Shim of ChatRoom.set_ChatRoomGuid(ChatRoom this, Guid value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.ChatRoomIdGet">
+            <summary>Sets the Shim of ChatRoom.get_ChatRoomId(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.ChatRoomIdSetInt32">
+            <summary>Sets the Shim of ChatRoom.set_ChatRoomId(ChatRoom this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.ChatRoomNameGet">
+            <summary>Sets the Shim of ChatRoom.get_ChatRoomName(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.ChatRoomNameSetString">
+            <summary>Sets the Shim of ChatRoom.set_ChatRoomName(ChatRoom this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.ChatRoomPathGet">
+            <summary>Sets the Shim of ChatRoom.get_ChatRoomPath(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.ChatRoomPathSetString">
+            <summary>Sets the Shim of ChatRoom.set_ChatRoomPath(ChatRoom this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.ChatroomFileTextGet">
+            <summary>Sets the Shim of ChatRoom.get_ChatroomFileText(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.ChatroomFileTextSetString">
+            <summary>Sets the Shim of ChatRoom.set_ChatroomFileText(ChatRoom this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.IsLoadedGet">
+            <summary>Sets the Shim of ChatRoom.get_IsLoaded(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.IsLoadedSetBoolean">
+            <summary>Sets the Shim of ChatRoom.set_IsLoaded(ChatRoom this, Boolean value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.PostsGet">
+            <summary>Sets the Shim of ChatRoom.get_Posts(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.PostsSetIEnumerableOfPost">
+            <summary>Sets the Shim of ChatRoom.set_Posts(ChatRoom this, IEnumerable`1 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.RowsGet">
+            <summary>Sets the Shim of ChatRoom.get_Rows(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.AllInstances.RowsSetIEnumerableOfString">
+            <summary>Sets the Shim of ChatRoom.set_Rows(ChatRoom this, IEnumerable`1 value)</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimChatRoom.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimChatRoom.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.ChatRoomGuidGet">
+            <summary>Sets the Shim of ChatRoom.get_ChatRoomGuid(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.ChatRoomGuidSetGuid">
+            <summary>Sets the Shim of ChatRoom.set_ChatRoomGuid(ChatRoom this, Guid value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.ChatRoomIdGet">
+            <summary>Sets the Shim of ChatRoom.get_ChatRoomId(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.ChatRoomIdSetInt32">
+            <summary>Sets the Shim of ChatRoom.set_ChatRoomId(ChatRoom this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.ChatRoomNameGet">
+            <summary>Sets the Shim of ChatRoom.get_ChatRoomName(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.ChatRoomNameSetString">
+            <summary>Sets the Shim of ChatRoom.set_ChatRoomName(ChatRoom this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.ChatRoomPathGet">
+            <summary>Sets the Shim of ChatRoom.get_ChatRoomPath(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.ChatRoomPathSetString">
+            <summary>Sets the Shim of ChatRoom.set_ChatRoomPath(ChatRoom this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.ChatroomFileTextGet">
+            <summary>Sets the Shim of ChatRoom.get_ChatroomFileText(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.ChatroomFileTextSetString">
+            <summary>Sets the Shim of ChatRoom.set_ChatroomFileText(ChatRoom this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.Constructor">
+            <summary>Sets the Shim of ChatRoom.ChatRoom(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.IsLoadedGet">
+            <summary>Sets the Shim of ChatRoom.get_IsLoaded(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.IsLoadedSetBoolean">
+            <summary>Sets the Shim of ChatRoom.set_IsLoaded(ChatRoom this, Boolean value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.PostsGet">
+            <summary>Sets the Shim of ChatRoom.get_Posts(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.PostsSetIEnumerableOfPost">
+            <summary>Sets the Shim of ChatRoom.set_Posts(ChatRoom this, IEnumerable`1 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.RowsGet">
+            <summary>Sets the Shim of ChatRoom.get_Rows(ChatRoom this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimChatRoom.RowsSetIEnumerableOfString">
+            <summary>Sets the Shim of ChatRoom.set_Rows(ChatRoom this, IEnumerable`1 value)</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.ShimMember">
+            <summary>Shim type of CSR.Entities.Member</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimMember.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimMember.#ctor(CSR.Entities.Member)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.ShimMember.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.FirstGet">
+            <summary>Sets the Shim of Member.get_First(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.FirstSetString">
+            <summary>Sets the Shim of Member.set_First(Member this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.LastGet">
+            <summary>Sets the Shim of Member.get_Last(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.LastSetString">
+            <summary>Sets the Shim of Member.set_Last(Member this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.MemberGuidGet">
+            <summary>Sets the Shim of Member.get_MemberGuid(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.MemberGuidSetGuid">
+            <summary>Sets the Shim of Member.set_MemberGuid(Member this, Guid value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.MemberHandleGet">
+            <summary>Sets the Shim of Member.get_MemberHandle(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.MemberHandleSetString">
+            <summary>Sets the Shim of Member.set_MemberHandle(Member this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.MemberIdGet">
+            <summary>Sets the Shim of Member.get_MemberId(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.MemberIdSetInt32">
+            <summary>Sets the Shim of Member.set_MemberId(Member this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.MessageGet">
+            <summary>Sets the Shim of Member.get_Message(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.MessageSetString">
+            <summary>Sets the Shim of Member.set_Message(Member this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.NameIdGet">
+            <summary>Sets the Shim of Member.get_NameId(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.NameIdSetInt32">
+            <summary>Sets the Shim of Member.set_NameId(Member this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.PhoneGet">
+            <summary>Sets the Shim of Member.get_Phone(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.AllInstances.PhoneSetString">
+            <summary>Sets the Shim of Member.set_Phone(Member this, String value)</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimMember.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimMember.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.Constructor">
+            <summary>Sets the Shim of Member.Member(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.FirstGet">
+            <summary>Sets the Shim of Member.get_First(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.FirstSetString">
+            <summary>Sets the Shim of Member.set_First(Member this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.LastGet">
+            <summary>Sets the Shim of Member.get_Last(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.LastSetString">
+            <summary>Sets the Shim of Member.set_Last(Member this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.MemberGuidGet">
+            <summary>Sets the Shim of Member.get_MemberGuid(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.MemberGuidSetGuid">
+            <summary>Sets the Shim of Member.set_MemberGuid(Member this, Guid value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.MemberHandleGet">
+            <summary>Sets the Shim of Member.get_MemberHandle(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.MemberHandleSetString">
+            <summary>Sets the Shim of Member.set_MemberHandle(Member this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.MemberIdGet">
+            <summary>Sets the Shim of Member.get_MemberId(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.MemberIdSetInt32">
+            <summary>Sets the Shim of Member.set_MemberId(Member this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.MessageGet">
+            <summary>Sets the Shim of Member.get_Message(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.MessageSetString">
+            <summary>Sets the Shim of Member.set_Message(Member this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.NameIdGet">
+            <summary>Sets the Shim of Member.get_NameId(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.NameIdSetInt32">
+            <summary>Sets the Shim of Member.set_NameId(Member this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.PhoneGet">
+            <summary>Sets the Shim of Member.get_Phone(Member this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimMember.PhoneSetString">
+            <summary>Sets the Shim of Member.set_Phone(Member this, String value)</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.ShimPost">
+            <summary>Shim type of CSR.Entities.Post</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimPost.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimPost.#ctor(CSR.Entities.Post)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.ShimPost.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.ChatRoomGet">
+            <summary>Sets the Shim of Post.get_ChatRoom(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.ChatRoomSetChatRoom">
+            <summary>Sets the Shim of Post.set_ChatRoom(Post this, ChatRoom value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.MemberHandleGet">
+            <summary>Sets the Shim of Post.get_MemberHandle(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.MemberHandleSetString">
+            <summary>Sets the Shim of Post.set_MemberHandle(Post this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.MessageGet">
+            <summary>Sets the Shim of Post.get_Message(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.MessageSetString">
+            <summary>Sets the Shim of Post.set_Message(Post this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.PostGuidGet">
+            <summary>Sets the Shim of Post.get_PostGuid(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.PostGuidSetGuid">
+            <summary>Sets the Shim of Post.set_PostGuid(Post this, Guid value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.PostIdGet">
+            <summary>Sets the Shim of Post.get_PostId(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.PostIdSetInt32">
+            <summary>Sets the Shim of Post.set_PostId(Post this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.PostTypeGet">
+            <summary>Sets the Shim of Post.get_PostType(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.PostTypeSetPostType">
+            <summary>Sets the Shim of Post.set_PostType(Post this, PostType value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.RowGet">
+            <summary>Sets the Shim of Post.get_Row(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.RowSetString">
+            <summary>Sets the Shim of Post.set_Row(Post this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.TimePostedGet">
+            <summary>Sets the Shim of Post.get_TimePosted(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.AllInstances.TimePostedSetNullableOfDateTime">
+            <summary>Sets the Shim of Post.set_TimePosted(Post this, Nullable`1 value)</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimPost.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.ShimPost.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.ChatRoomGet">
+            <summary>Sets the Shim of Post.get_ChatRoom(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.ChatRoomSetChatRoom">
+            <summary>Sets the Shim of Post.set_ChatRoom(Post this, ChatRoom value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.Constructor">
+            <summary>Sets the Shim of Post.Post(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.MemberHandleGet">
+            <summary>Sets the Shim of Post.get_MemberHandle(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.MemberHandleSetString">
+            <summary>Sets the Shim of Post.set_MemberHandle(Post this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.MessageGet">
+            <summary>Sets the Shim of Post.get_Message(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.MessageSetString">
+            <summary>Sets the Shim of Post.set_Message(Post this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.PostGuidGet">
+            <summary>Sets the Shim of Post.get_PostGuid(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.PostGuidSetGuid">
+            <summary>Sets the Shim of Post.set_PostGuid(Post this, Guid value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.PostIdGet">
+            <summary>Sets the Shim of Post.get_PostId(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.PostIdSetInt32">
+            <summary>Sets the Shim of Post.set_PostId(Post this, Int32 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.PostTypeGet">
+            <summary>Sets the Shim of Post.get_PostType(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.PostTypeSetPostType">
+            <summary>Sets the Shim of Post.set_PostType(Post this, PostType value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.RowGet">
+            <summary>Sets the Shim of Post.get_Row(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.RowSetString">
+            <summary>Sets the Shim of Post.set_Row(Post this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.TimePostedGet">
+            <summary>Sets the Shim of Post.get_TimePosted(Post this)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.ShimPost.TimePostedSetNullableOfDateTime">
+            <summary>Sets the Shim of Post.set_TimePosted(Post this, Nullable`1 value)</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.StubAudioWave">
+            <summary>Stub type of CSR.Entities.AudioWave</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubAudioWave.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubAudioWave.AttachBackingFieldToAudioWaveConfig">
+            <summary>Attaches delegates to emulate StubAudioWave.AudioWaveConfig as a property with a backing field.</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubAudioWave.AttachBackingFieldToAudioWaveGuid">
+            <summary>Attaches delegates to emulate StubAudioWave.AudioWaveGuid as a property with a backing field.</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubAudioWave.AudioWaveConfig">
+            <summary>Sets the stub of AudioWave.get_AudioWaveConfig(AudioWave this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubAudioWave.AudioWaveConfigGet">
+            <summary>Sets the stub of AudioWave.get_AudioWaveConfig(AudioWave this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubAudioWave.AudioWaveConfigSetString">
+            <summary>Sets the stub of AudioWave.set_AudioWaveConfig(AudioWave this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubAudioWave.AudioWaveGuid">
+            <summary>Sets the stub of AudioWave.get_AudioWaveGuid(AudioWave this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubAudioWave.AudioWaveGuidGet">
+            <summary>Sets the stub of AudioWave.get_AudioWaveGuid(AudioWave this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubAudioWave.AudioWaveGuidSetNullableOfGuid">
+            <summary>Sets the stub of AudioWave.set_AudioWaveGuid(AudioWave this, Nullable`1 value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubAudioWave.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubAudioWave.InitializeStub">
+            <summary>Initializes a new instance of type StubAudioWave</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubAudioWave.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubAudioWave.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.StubChatImport">
+            <summary>Stub type of CSR.Entities.ChatImport</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubChatImport.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubChatImport.AttachBackingFieldToChatRows">
+            <summary>Attaches delegates to emulate StubChatImport.ChatRows as a property with a backing field.</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubChatImport.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubChatImport.ChatRows">
+            <summary>Sets the stub of ChatImport.get_ChatRows(ChatImport this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubChatImport.ChatRowsGet">
+            <summary>Sets the stub of ChatImport.get_ChatRows(ChatImport this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubChatImport.ChatRowsSetICollectionOfString">
+            <summary>Sets the stub of ChatImport.set_ChatRows(ChatImport this, ICollection`1 value)</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubChatImport.InitializeStub">
+            <summary>Initializes a new instance of type StubChatImport</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubChatImport.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubChatImport.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.StubChatRoom">
+            <summary>Stub type of CSR.Entities.ChatRoom</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubChatRoom.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubChatRoom.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubChatRoom.InitializeStub">
+            <summary>Initializes a new instance of type StubChatRoom</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubChatRoom.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubChatRoom.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.StubMember">
+            <summary>Stub type of CSR.Entities.Member</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubMember.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubMember.AttachBackingFieldToFirst">
+            <summary>Attaches delegates to emulate StubMember.First as a property with a backing field.</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubMember.AttachBackingFieldToLast">
+            <summary>Attaches delegates to emulate StubMember.Last as a property with a backing field.</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubMember.AttachBackingFieldToMemberHandle">
+            <summary>Attaches delegates to emulate StubMember.MemberHandle as a property with a backing field.</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubMember.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubMember.First">
+            <summary>Sets the stub of Member.get_First(Member this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubMember.FirstGet">
+            <summary>Sets the stub of Member.get_First(Member this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubMember.FirstSetString">
+            <summary>Sets the stub of Member.set_First(Member this, String value)</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubMember.InitializeStub">
+            <summary>Initializes a new instance of type StubMember</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubMember.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubMember.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubMember.Last">
+            <summary>Sets the stub of Member.get_Last(Member this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubMember.LastGet">
+            <summary>Sets the stub of Member.get_Last(Member this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubMember.LastSetString">
+            <summary>Sets the stub of Member.set_Last(Member this, String value)</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubMember.MemberHandle">
+            <summary>Sets the stub of Member.get_MemberHandle(Member this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubMember.MemberHandleGet">
+            <summary>Sets the stub of Member.get_MemberHandle(Member this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubMember.MemberHandleSetString">
+            <summary>Sets the stub of Member.set_MemberHandle(Member this, String value)</summary>
+        </member>
+        <member name="T:CSR.Entities.Fakes.StubPost">
+            <summary>Stub type of CSR.Entities.Post</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubPost.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubPost.AttachBackingFieldToChatRoom">
+            <summary>Attaches delegates to emulate StubPost.ChatRoom as a property with a backing field.</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubPost.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubPost.ChatRoom">
+            <summary>Sets the stub of Post.get_ChatRoom(Post this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubPost.ChatRoomGet">
+            <summary>Sets the stub of Post.get_ChatRoom(Post this)</summary>
+        </member>
+        <member name="F:CSR.Entities.Fakes.StubPost.ChatRoomSetChatRoom">
+            <summary>Sets the stub of Post.set_ChatRoom(Post this, ChatRoom value)</summary>
+        </member>
+        <member name="M:CSR.Entities.Fakes.StubPost.InitializeStub">
+            <summary>Initializes a new instance of type StubPost</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubPost.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:CSR.Entities.Fakes.StubPost.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

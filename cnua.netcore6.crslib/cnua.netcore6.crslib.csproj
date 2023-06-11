@@ -1,0 +1,115 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>crs</AssemblyName>
+    <RootNamespace>CSR</RootNamespace>
+    <UseWindowsForms>False</UseWindowsForms>
+    <PackageLicenseExpression>Artistic-1.0</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Chatroom Studio by WaksWorks™</Title>
+    <Authors>Wakeelu Mamudu</Authors>
+    <Company>WaksWorks Lambeth London England</Company>
+    <Product>crslib</Product>
+    <Description>chatroom studio library </Description>
+    <Copyright>© 2023 WaksWorks All Rights Reserved</Copyright>
+    <PackageProjectUrl>crs.aieo.co.uk</PackageProjectUrl>
+    <PackageIcon>favico.png</PackageIcon>
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageTags>whatsapp-export;chatroom-speech;chatroom-media;chatroom-app</PackageTags>
+    <PackageReleaseNotes>prototype version 2023 summer</PackageReleaseNotes>
+    <PackAsTool>False</PackAsTool>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <PackageId>waksworks.crslib</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Entities\Extensions\CSR_Entities_Extensions2.cs" />
+    <Compile Remove="IO\Cocoon.cs" />
+    <Compile Remove="IO\CocoonII.cs" />
+    <Compile Remove="IO\IOEngine.cs" />
+    <Compile Remove="IO\IOExtractionEngine.cs" />
+    <Compile Remove="IO\IOSpeech.cs" />
+    <Compile Remove="IO\IOTransformEngine.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="30.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="7.0.0" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+    <PackageReference Include="System.Speech" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\cnua\source\repos\ChatroomStudioProto\ChatroomStudioProto\cnua.netcore6.crslib\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="FS\WhatsApp Chat with CrsExempR.txt" />
+    <None Remove="log4net.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="FS\WhatsApp Chat with CrsExempR.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\cnua\source\repos\ChatroomStudioProto\ChatroomStudioProto\cnua.netcore6.crslib\.editorconfig" />
+    <None Include="readme.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="favico.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="CSR.Entities" />
+    <Using Include="CsvHelper" />
+    <Using Include="Microsoft.Extensions.Logging" />
+    <Using Include="System.Speech.AudioFormat" />
+    <Using Include="System.Speech.Synthesis" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IO\" />
+  </ItemGroup>
+
+</Project>
