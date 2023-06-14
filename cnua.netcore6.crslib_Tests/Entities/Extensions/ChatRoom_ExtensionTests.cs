@@ -25,12 +25,12 @@ namespace CSR.Entities.Extensions.Tests
 
 		[Fact()]
 		[Obsolete]
-		public void ToFilteredRowsTest()
+		public void InsertRowHeaderToMultilineContentTest()
 		{
 			//arrange
-            string path = @"G:\My Drive\Development\ChatroomStudioProto\cnua.netcore6.crslibTests\Resources\WhatsApp Chat with TestData.txt";
+            string path = @"C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\FS\WhatsApp Chat with TESTDATA_InsertRowHeaderToMultilineContent.txt";
 			string[] lines = File.ReadAllLines(path);
-			string[] filtered = lines.ToFilteredRows();
+			string[] filtered = lines.InsertRowHeaderToMultilineContent();
 			//act
 			var expected = 29;// lines.Length = 30;
 			var actual = filtered.Length;

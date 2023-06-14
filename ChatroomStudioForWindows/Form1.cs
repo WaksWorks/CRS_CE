@@ -155,7 +155,7 @@ namespace ChatroomStudioForWindows
 		{
 			dgvChatroomTextLines.AutoGenerateColumns = true;
 			var lines = File.ReadAllLines(txtFilePath.Text);
-			var filtered = lines.ToFilteredRows();
+			var filtered = lines.InsertRowHeaderToMultilineContent();
 			this.bdsLines.DataSource = filtered.Select(s => new { Row = s }).ToList();
 			dgvChatroomTextLines.DataSource = bdsLines;
 

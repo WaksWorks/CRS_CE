@@ -14,6 +14,7 @@ using System.Text.RegularExpressions;
 using System.Diagnostics;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using System.Reflection;
 
 namespace CSR.Entities.Extensions
 {
@@ -46,7 +47,7 @@ namespace CSR.Entities.Extensions
 			}
 			cr.ChatRoomName = f.Name.Substring(19).Replace(WHATSAPP_FILE_PREFIX, "").Replace(".txt", "");
 			cr.ChatRoomPath = f.FullName;
-			cr.ChatroomFileText = File.ReadAllText(exportFilePath);
+			cr.RawText = File.ReadAllText(exportFilePath);
 			cr.Rows = File.ReadAllLines(exportFilePath);
 			//cr.Posts = cr.Rows.ToPosts();
 			return true;
@@ -105,6 +106,7 @@ namespace CSR.Entities.Extensions
 				PostType = postType
 			});
 		}
+		[Obsolete("Do not use")]
 		public static Post? ToPost(this string row)
 		{
 			//TODO: contains date at start and has memberhandle
@@ -176,19 +178,24 @@ namespace CSR.Entities.Extensions
 			};
 		}
 		[Obsolete("Inserts Row Header into multiline text only content " +
-			"PostType.TextOnlyLine: 23/04/2023, 23:31 - W2W3: FXN9JR")]
+			"Insert System label as MemberHandle in System Posts" +
+			"PostType.TextOnlyLine: 23/04/2023, 23:31 - W2W3: FXN9JR" +
+			"PostType.System 23/04/2023, 21:18 - @System: You started a call")]
 		/// <summary>
 		/// strategy: insert PostHeader [datetime, MemberHandle] content only lines
 		/// Transform multiline content into entry only lines
+		/// insert 
 		/// </summary>
 		/// <param name="rows"></param>
 		/// <returns>array of strings</returns>
-		public static string[] ToFilteredRows(this string[] rows)
+		public static string[] InsertRowHeaderToMultilineContent(this string[] rows)
 		{
 			string memberHandle = "";
 			string key = "";
+			string rowBuffer = "";
 			List<string> lst = new List<string>();
 			StringBuilder sb = new StringBuilder();
+
 			IEnumerable<IGrouping<string, string>> query = rows
 				.Where(s => s.Length > 0)
 				.GroupBy(s => s.Length < 17 ? sb.Append(s).ToString() : s.Substring(0, 17)
@@ -202,18 +209,24 @@ namespace CSR.Entities.Extensions
 				{
 					sb.Clear();
 					foreach (string groupname in grouping)
-					{
-						lst.Add(groupname);
-						key = grouping.Key;//.Replace(" ", ", ");
+					{   /* insert system as memberHandle into system Posts */
+						if (groupname.Split(':').Length == 2)
+						{
+							memberHandle = @" @System: ";
+							rowBuffer = groupname.Insert(20, memberHandle);
+							lst.Add(rowBuffer);
+						}
+						else
+							lst.Add(groupname);
+						//preserve for multiline header insert
+						key = grouping.Key;
 						var arr = groupname.Substring(20).Split(':');
 						memberHandle = arr[0];
 					}
-
 				}
 				else
-				{/*
-				  * basically insert the RowHeader into the content line of multiline post type
-				  */
+				{
+					/* basically insert the RowHeader into the content line of multiline post type */
 					sb.Append(key);
 					sb.Append(" - ");
 					sb.Append(memberHandle);
@@ -222,7 +235,6 @@ namespace CSR.Entities.Extensions
 					lst.Add(sb.ToString());
 					sb.Clear();
 				}
-
 			}
 			return lst.ToArray<string>();
 		}
@@ -231,7 +243,7 @@ namespace CSR.Entities.Extensions
 		{
 			//TODO: contains date at start and has memberhandle
 			//Row Text Sample:> 23/04/2023, 21:23 - W2W3: And I'll keep you  oth in the loop right here.
-			//System Row Sample: >> 23/04/2023, 20:53 - Wole Solanke added you
+
 			DateTime dateValue;
 			bool b = false;
 			string datestr = row.Substring(0, 17).Replace(",", "");

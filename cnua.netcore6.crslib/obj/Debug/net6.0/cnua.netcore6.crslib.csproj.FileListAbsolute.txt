@@ -343,3 +343,4 @@ C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\obj
 C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\obj\Debug\net6.0\crs.pdb
 C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\obj\Debug\net6.0\cnua.netcore6.crslib.genruntimeconfig.cache
 C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\obj\Debug\net6.0\ref\crs.dll
+C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\bin\Debug\net6.0\FS\WhatsApp Chat with TESTDATA_InsertRowHeaderToMultilineContent.txt

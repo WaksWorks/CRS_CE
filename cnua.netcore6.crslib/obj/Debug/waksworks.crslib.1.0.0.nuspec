@@ -25,6 +25,7 @@
     </dependencies>
     <contentFiles>
       <files include="any/net6.0/favicon.ico" buildAction="Content" />
+      <files include="any/net6.0/FS/WhatsApp Chat with TESTDATA_InsertRowHeaderToMultilineContent.txt" buildAction="Content" />
       <files include="any/net6.0/FS/WhatsApp Chat with CrsExempR.txt" buildAction="Content" />
     </contentFiles>
   </metadata>
@@ -33,6 +34,8 @@
     <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\bin\Debug\net6.0\crs.dll" target="lib\net6.0\crs.dll" />
     <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\favicon.ico" target="content\favicon.ico" />
     <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\favicon.ico" target="contentFiles\any\net6.0\favicon.ico" />
+    <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\FS\WhatsApp Chat with TESTDATA_InsertRowHeaderToMultilineContent.txt" target="content\FS\WhatsApp Chat with TESTDATA_InsertRowHeaderToMultilineContent.txt" />
+    <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\FS\WhatsApp Chat with TESTDATA_InsertRowHeaderToMultilineContent.txt" target="contentFiles\any\net6.0\FS\WhatsApp Chat with TESTDATA_InsertRowHeaderToMultilineContent.txt" />
     <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\FS\WhatsApp Chat with CrsExempR.txt" target="content\FS\WhatsApp Chat with CrsExempR.txt" />
     <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\FS\WhatsApp Chat with CrsExempR.txt" target="contentFiles\any\net6.0\FS\WhatsApp Chat with CrsExempR.txt" />
     <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\favico.png" target="\favico.png" />

@@ -13,8 +13,8 @@ namespace CSR.Entities
         /// </summary>
         public string? ChatRoomName { get; set; }
         public string? ChatRoomPath { get; set; }
-        public  IEnumerable<string> Rows { get; set; }
-        public IEnumerable<Post> Posts { get; set; }
-        public string? ChatroomFileText { get; set; }
+        public  IEnumerable<string>? Rows { get; set; }
+        public IEnumerable<Post>? Posts { get; set; }
+        public string? RawText { get; set; }
     }
 }
