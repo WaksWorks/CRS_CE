@@ -29,13 +29,13 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\bin\Debug\net6.0\crs.runtimeconfig.json" target="lib\net6.0\crs.runtimeconfig.json" />
-    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\bin\Debug\net6.0\crs.dll" target="lib\net6.0\crs.dll" />
-    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\favicon.ico" target="content\favicon.ico" />
-    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\favicon.ico" target="contentFiles\any\net6.0\favicon.ico" />
-    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\FS\WhatsApp Chat with CrsExempR.txt" target="content\FS\WhatsApp Chat with CrsExempR.txt" />
-    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\FS\WhatsApp Chat with CrsExempR.txt" target="contentFiles\any\net6.0\FS\WhatsApp Chat with CrsExempR.txt" />
-    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\favico.png" target="\favico.png" />
-    <file src="C:\Users\cnua\source\repos\cnua\crswin32\cnua.netcore6.crslib\readme.md" target="\readme.md" />
+    <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\bin\Debug\net6.0\crs.runtimeconfig.json" target="lib\net6.0\crs.runtimeconfig.json" />
+    <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\bin\Debug\net6.0\crs.dll" target="lib\net6.0\crs.dll" />
+    <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\favicon.ico" target="content\favicon.ico" />
+    <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\favicon.ico" target="contentFiles\any\net6.0\favicon.ico" />
+    <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\FS\WhatsApp Chat with CrsExempR.txt" target="content\FS\WhatsApp Chat with CrsExempR.txt" />
+    <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\FS\WhatsApp Chat with CrsExempR.txt" target="contentFiles\any\net6.0\FS\WhatsApp Chat with CrsExempR.txt" />
+    <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\favico.png" target="\favico.png" />
+    <file src="C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\readme.md" target="\readme.md" />
   </files>
 </package>
