@@ -476,3 +476,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /.vs/ChatroomStudioForWindows/v17/.suo
+/.vs/ChatroomStudioForWindows/DesignTimeBuild/.dtbcache.v2
+/.gitignore
