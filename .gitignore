@@ -478,3 +478,4 @@ $RECYCLE.BIN/
 /.vs/ChatroomStudioForWindows/v17/.suo
 /.vs/ChatroomStudioForWindows/DesignTimeBuild/.dtbcache.v2
 /.gitignore
+/.vs/slnx.sqlite
