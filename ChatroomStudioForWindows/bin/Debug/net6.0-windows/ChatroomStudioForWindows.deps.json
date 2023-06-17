@@ -9,7 +9,8 @@
       "ChatroomStudioForWindows/1.0.0": {
         "dependencies": {
           "System.Speech": "7.0.0",
-          "waksworks.crslib": "1.0.0"
+          "waksworks.crslib": "1.0.0",
+          "crs": "1.0.0.0"
         },
         "runtime": {
           "ChatroomStudioForWindows.dll": {}
@@ -502,6 +503,14 @@
         "runtime": {
           "crs.dll": {}
         }
+      },
+      "crs/1.0.0.0": {
+        "runtime": {
+          "crs.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -744,6 +753,11 @@
     },
     "waksworks.crslib/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "crs/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }
