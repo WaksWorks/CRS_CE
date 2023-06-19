@@ -10,10 +10,10 @@ namespace CSR.Collections
 	/// <summary>
 	/// Collection of Posts
 	/// </summary>
-	internal class Posts: List<Post>
+	public class PostList: List<Post>
 	{
 		//load posts from file
-		public Posts(string filePath)
+		public PostList(string filePath)
 		{
 			Load(filePath);
 		}

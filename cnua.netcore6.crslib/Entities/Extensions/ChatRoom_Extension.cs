@@ -15,6 +15,7 @@ using System.Diagnostics;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Reflection;
+using CSR.Collections;
 
 namespace CSR.Entities.Extensions
 {
@@ -48,7 +49,12 @@ namespace CSR.Entities.Extensions
 			cr.ChatGroupName = f.Name.Substring(19).Replace(WHATSAPP_FILE_PREFIX, "").Replace(".txt", "");
 			cr.FilePath = f.FullName;
 			cr.InputText = File.ReadAllText(f.FullName);
-			cr.Rows = cr.InputText.Split(Environment.NewLine);
+			cr.FilteredRows = cr.InputText.Split(Environment.NewLine).GetFilteredRows();
+			//load posts
+			cr.Posts = cr.FilteredRows.Select(r => r.ToPost()).Where(p => p != null).Select(p => p!).ToList<Post>();	
+			cr.PostList = new PostList(cr.FilePath);
+			cr.IsLoaded = true;
+
 			return true;
 		}
 
