@@ -107,8 +107,8 @@ namespace ChatroomStudioForWindows
 
 		private void dbgRows_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-			var str = dgvChatroomTextLines.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-			var p = str.ToString().GetPost();
+			var str =(string) dgvChatroomTextLines.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+			var p = str.ToPost();
 			MessageBox.Show(p.Message);
 		}
 
@@ -155,7 +155,7 @@ namespace ChatroomStudioForWindows
 		{
 			dgvChatroomTextLines.AutoGenerateColumns = true;
 			var lines = File.ReadAllLines(txtFilePath.Text);
-			var filtered = lines.InsertRowHeaderToMultilineContent();
+			var filtered = lines.GetFilteredRows();
 			this.bdsLines.DataSource = filtered.Select(s => new { Row = s }).ToList();
 			dgvChatroomTextLines.DataSource = bdsLines;
 
