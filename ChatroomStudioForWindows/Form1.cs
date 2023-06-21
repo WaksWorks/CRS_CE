@@ -6,6 +6,8 @@ using CSR.Entities;
 using CSR.Entities.Extensions;
 using System.Windows.Forms;
 using System;
+using CSR.Collections;
+using System.ComponentModel.Design;
 
 namespace ChatroomStudioForWindows
 {
@@ -107,8 +109,8 @@ namespace ChatroomStudioForWindows
 
 		private void dbgRows_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-			var str = dgvChatroomTextLines.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-			var p = str.ToString().GetPost();
+			var str = (string)dgvChatroomTextLines.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+			var p = str.ToPost();
 			MessageBox.Show(p.Message);
 		}
 
@@ -155,10 +157,67 @@ namespace ChatroomStudioForWindows
 		{
 			dgvChatroomTextLines.AutoGenerateColumns = true;
 			var lines = File.ReadAllLines(txtFilePath.Text);
-			var filtered = lines.ToFilteredRows();
+			var filtered = lines.GetFilteredRows();
 			this.bdsLines.DataSource = filtered.Select(s => new { Row = s }).ToList();
 			dgvChatroomTextLines.DataSource = bdsLines;
 
 		}
+
+		private void btnFilterRows_Click(object sender, EventArgs e)
+		{
+			ChatRecordSet crs = new ChatRecordSet();
+			crs.Load(txtFilePath.Text);
+			if (crs.IsLoaded)
+			{
+				dgvFilteredRows.AutoGenerateColumns = true;
+
+				this.bdsLines.DataSource = crs.FilteredRows.ToList();
+				dgvFilteredRows.DataSource = bdsLines;
+			}
+		}
+
+		private void btnLoadPosts_Click(object sender, EventArgs e)
+		{
+
+			var rs = new PostList(txtFilePath.Text);
+			rs.Load();
+
+			dgvPosts.AutoGenerateColumns = true;
+
+			this.bdsLines.DataSource = rs;
+			dgvPosts.DataSource = bdsLines;
+			dgvPosts.BeginInvoke(new MethodInvoker(delegate
+			{
+				dgvPosts.FirstDisplayedScrollingRowIndex = dgvPosts.RowCount - 1;
+			}));
+		}
+
+		private void dgvPosts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			//load post members to seperate controls
+			var p = (Post)dgvPosts.Rows[e.RowIndex].DataBoundItem;
+			txtPostContent.Text = p.Message;
+			txtMemberHandle.Text = p.MemberHandle;
+			monthCalendar1.SetDate(p.TimePosted.Value);
+			//set p.timeposted to a winform control
+			//dtpPostDate.Value = p.TimePosted.Value;
+
+		}
+
+		private void tooltTransitions_Popup(object sender, PopupEventArgs e)
+		{
+			tooltTransitions.SetToolTip(txtFilePath, "Speak the text in the text box");
+		}
+
+		private void dtpPostDate_ValueChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+		{
+
+		}
 	}
 }
+

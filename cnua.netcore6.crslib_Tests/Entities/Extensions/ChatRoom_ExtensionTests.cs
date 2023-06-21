@@ -15,7 +15,7 @@ namespace CSR.Entities.Extensions.Tests
 		public void LoadTest()
 		{
 			string path = @"C:\Users\cnua\source\repos\ChatroomStudioProto\ChatroomStudioProto\cnua.netcore6.crslibTests\Resources\WhatsApp Chat with Andy Obd.txt";
-			var cr = new ChatRoom();
+			var cr = new ChatRecordSet();
 			var fi = new FileInfo(path);
 			cr.Load(fi.FullName);
 
@@ -25,19 +25,35 @@ namespace CSR.Entities.Extensions.Tests
 
 		[Fact()]
 		[Obsolete]
-		public void ToFilteredRowsTest()
+		public void InsertRowHeaderToMultilineContentTest()
 		{
 			//arrange
-            string path = @"G:\My Drive\Development\ChatroomStudioProto\cnua.netcore6.crslibTests\Resources\WhatsApp Chat with TestData.txt";
+            string path = @"C:\Users\cnua\source\repos\Chatroom Studio™ Community\cnua.netcore6.crslib\FS\WhatsApp Chat with TESTDATA_InsertRowHeaderToMultilineContent.txt";
 			string[] lines = File.ReadAllLines(path);
-			string[] filtered = lines.ToFilteredRows();
+			var filtered = lines.GetFilteredRows().ToArray();
 			//act
 			var expected = 29;// lines.Length = 30;
 			var actual = filtered.Length;
 			//assert
 			Assert.True(expected == actual);
 		}
-    }
+
+		[Fact()]
+		public void GetPostsTest()
+		{
+			//arrange
+			string path = @"C:\Users\cnua\source\repos\ChatroomStudioProto\ChatroomStudioProto\cnua.netcore6.crslibTests\Resources\WhatsApp Chat with Andy Obd.txt";
+			var cr = new ChatRecordSet();
+			var fi = new FileInfo(path);
+			cr.Load(fi.FullName);
+			//act
+			var expected = 30;
+			var actual = cr.Posts.Count();
+			//assert
+			Assert.True(expected == actual);
+
+		}
+	}
 }
 
 namespace cnua.netcore6.crslibTests.Entities.Extensions

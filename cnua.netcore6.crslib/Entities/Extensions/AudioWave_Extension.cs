@@ -8,7 +8,7 @@ namespace CSR.Entities.Extensions
 {
     internal class AudioWave_Extension
     {
-        static void SetVoice(ChatRoom cr)
+        static void SetVoice(ChatRecordSet cr)
         {
             // Initialize a new instance of the SpeechSynthesizer.  
             using (SpeechSynthesizer synth = new SpeechSynthesizer())

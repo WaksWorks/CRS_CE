@@ -1,0 +1,8 @@
+Dear Mr Zuckerberg,
+I write you as a systems developer; said by myself as if cyberspace is otherwise occupied apart from the electronic State of the Art :-)
+
+I have a grand vision based on WhatsApp, a derivative product that is very much a part of your product; exceptionally symbiotic and best as intrinsic value. There are very good reasons behind constrains protecting the WhatsApp ecosystem, such as prevent insensitivity at the root cause to overwhelming operations through API access developer usage for thrid party applications
+
+I have developed a prototype that works fine and is so good to warrant this letter, asking that you consider the possiblitie of growth
+
+ChatRoom Studio is a tool

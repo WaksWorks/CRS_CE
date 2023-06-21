@@ -10,7 +10,7 @@ namespace CSR.Entities
     {
         public int ChatImportId { get; set; }
         public Guid ChatImportGuid { get; set; } = new Guid();
-        public ChatRoom? ChatRoom { get; set; }
+        public ChatRecordSet? ChatRoom { get; set; }
         public virtual ICollection<string>? ChatRows { get; set; }
 
     }
