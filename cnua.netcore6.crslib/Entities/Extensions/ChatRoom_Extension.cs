@@ -50,9 +50,8 @@ namespace CSR.Entities.Extensions
 			cr.FilePath = f.FullName;
 			cr.InputText = File.ReadAllText(f.FullName);
 			cr.FilteredRows = cr.InputText.Split(Environment.NewLine).GetFilteredRows();
-			//load posts
-			cr.Posts = cr.FilteredRows.Select(r => r.ToPost()).Where(p => p != null).Select(p => p!).ToList<Post>();	
-			cr.PostList = new PostList(cr.FilePath);
+			cr.Posts = cr.FilteredRows.Select(r => r.ToPost()).Where(p => p != null).Select(p => p!).ToList<Post>();
+
 			cr.IsLoaded = true;
 
 			return true;
@@ -151,11 +150,13 @@ namespace CSR.Entities.Extensions
 		{
 			//convert rows to posts
 			List<Post> lst = new List<Post>();
+			int i = 0;
 			foreach (string row in rows)
 			{
 				Post? p = row.ToPost();
 				if (p != null)
-					lst.Add(p);
+					p.PostId = i++;
+				lst.Add(p);
 			}
 			return lst.ToArray<Post>();
 		}

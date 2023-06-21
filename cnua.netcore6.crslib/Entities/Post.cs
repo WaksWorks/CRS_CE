@@ -8,9 +8,9 @@ namespace CSR.Entities
 	/// <summary>
 	/// Am single message posted in a group
 	/// </summary>
-	public partial class Post : IPost
+	public partial class Post 
 	{
-		public int PostId { get; set; }
+		public int? PostId { get; set; }
 		public Guid PostGuid { get; init; } = Guid.NewGuid();
 		public virtual ChatRecordSet? ChatRoom { get; set; }
 		public DateTime? TimePosted { get; set; }

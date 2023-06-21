@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatroomStudioForWindows", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cnua.netcore6.crslib_Tests", "cnua.netcore6.crslib_Tests\cnua.netcore6.crslib_Tests.csproj", "{C24696FE-752A-48F9-8A31-36204EAB365C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cnua.netcore6.crslibTests1", "cnua.netcore6.crslibTests1\cnua.netcore6.crslibTests1.csproj", "{B6F83DA0-5FAD-48A4-A194-588E51CD7B85}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{C24696FE-752A-48F9-8A31-36204EAB365C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C24696FE-752A-48F9-8A31-36204EAB365C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C24696FE-752A-48F9-8A31-36204EAB365C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6F83DA0-5FAD-48A4-A194-588E51CD7B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6F83DA0-5FAD-48A4-A194-588E51CD7B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6F83DA0-5FAD-48A4-A194-588E51CD7B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6F83DA0-5FAD-48A4-A194-588E51CD7B85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

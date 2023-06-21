@@ -12,14 +12,17 @@ namespace CSR.Collections
 	/// </summary>
 	public class PostList: List<Post>
 	{
+		private readonly string _filePath;
+
 		//load posts from file
 		public PostList(string filePath)
 		{
-			Load(filePath);
+			_filePath = filePath;
+			Load();
 		}
-		public void Load(string filePath)
+		public void Load()
 		{
-			var lines = File.ReadAllLines(filePath);
+			var lines = File.ReadAllLines(_filePath);
 			var filtered = lines.GetFilteredRows().ToArray();
 			var posts = filtered.GetPosts().ToArray();
 			this.AddRange(posts);
