@@ -27,6 +27,7 @@
     <PackAsTool>False</PackAsTool>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <PackageId>waksworks.crslib</PackageId>
+    <Configurations>Debug;Release;crslib_build</Configurations>
   </PropertyGroup>
 
   <ItemGroup>

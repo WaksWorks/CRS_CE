@@ -11,18 +11,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cnua.netcore6.crslib_Tests"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		crslib_build|Any CPU = crslib_build|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D26097ED-CAFA-4443-B63F-E1BBC487DA24}.crslib_build|Any CPU.ActiveCfg = crslib_build|Any CPU
+		{D26097ED-CAFA-4443-B63F-E1BBC487DA24}.crslib_build|Any CPU.Build.0 = crslib_build|Any CPU
 		{D26097ED-CAFA-4443-B63F-E1BBC487DA24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D26097ED-CAFA-4443-B63F-E1BBC487DA24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D26097ED-CAFA-4443-B63F-E1BBC487DA24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D26097ED-CAFA-4443-B63F-E1BBC487DA24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3FC799C-17AB-4ED8-A186-1FC62C7CA32A}.crslib_build|Any CPU.ActiveCfg = crslib_build|Any CPU
 		{C3FC799C-17AB-4ED8-A186-1FC62C7CA32A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3FC799C-17AB-4ED8-A186-1FC62C7CA32A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3FC799C-17AB-4ED8-A186-1FC62C7CA32A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3FC799C-17AB-4ED8-A186-1FC62C7CA32A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C24696FE-752A-48F9-8A31-36204EAB365C}.crslib_build|Any CPU.ActiveCfg = crslib_build|Any CPU
+		{C24696FE-752A-48F9-8A31-36204EAB365C}.crslib_build|Any CPU.Build.0 = crslib_build|Any CPU
 		{C24696FE-752A-48F9-8A31-36204EAB365C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C24696FE-752A-48F9-8A31-36204EAB365C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C24696FE-752A-48F9-8A31-36204EAB365C}.Release|Any CPU.ActiveCfg = Release|Any CPU
