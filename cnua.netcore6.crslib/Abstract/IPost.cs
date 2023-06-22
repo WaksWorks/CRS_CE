@@ -1,6 +1,4 @@
-﻿using CSR.System;
-
-namespace CSR.Abstract
+﻿namespace CSR.Abstract
 {
 	public interface IPost
 	{

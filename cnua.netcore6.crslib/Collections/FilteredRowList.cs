@@ -3,25 +3,44 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace CSR.Collections
 {
 	/// <summary>
-	/// filtered rows
+	/// Collection filtered rows
 	/// </summary>
 	public class FilteredRowList: List<string>
 	{
+		private readonly string _filePath;
+		private readonly string _jsonFile;
+
 		public FilteredRowList(string filePath)
 		{
-			Load(filePath);
+			_filePath = filePath;
+			_jsonFile = Path.ChangeExtension(_filePath, ".json");
 		}
-		public void Load(string filePath)
+		/// <summary>
+		/// load filtered Rows Collection from file.
+		/// </summary>
+		public void Load()
 		{
-			var lines = File.ReadAllLines(filePath);
+			var lines = File.ReadAllLines(_filePath);
 			var filtered = lines.GetFilteredRows().ToArray();
 			this.AddRange(filtered);
 		}
+		public void Save()
+		{
+			var json = JsonSerializer.Serialize(this);
+			File.WriteAllText(_jsonFile, json);
 
+		}
+		public void LoadFilteredJson()
+		{
+			string json = File.ReadAllText(_jsonFile);
+			var filtered = JsonSerializer.Deserialize<string[]>(json)!;
+			this.AddRange(filtered);
+		}
 	}
 }

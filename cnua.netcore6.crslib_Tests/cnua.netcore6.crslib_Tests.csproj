@@ -22,8 +22,4 @@
     <ProjectReference Include="..\cnua.netcore6.crslib\cnua.netcore6.crslib.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Collections\" />
-  </ItemGroup>
-
 </Project>

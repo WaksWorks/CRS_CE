@@ -1,5 +1,4 @@
 ﻿using CSR.Abstract;
-using CSR.System;
 using System;
 
 namespace CSR.Entities

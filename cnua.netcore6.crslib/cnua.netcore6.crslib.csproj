@@ -5,7 +5,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>crs</AssemblyName>
+    <AssemblyName>crslib</AssemblyName>
     <RootNamespace>CSR</RootNamespace>
     <UseWindowsForms>False</UseWindowsForms>
     <PackageLicenseExpression>Artistic-1.0</PackageLicenseExpression>
