@@ -24,7 +24,6 @@ namespace CSR.Entities.Extensions.Tests
 
 
 		[Fact()]
-		[Obsolete]
 		public void InsertRowHeaderToMultilineContentTest()
 		{
 			//arrange

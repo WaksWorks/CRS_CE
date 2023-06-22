@@ -1794,11 +1794,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cnua\\source\\repos\\Chatroom Studio™ Community\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj",
+      "projectUniqueName": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj",
       "projectName": "ChatroomStudioForWindows",
-      "projectPath": "C:\\Users\\cnua\\source\\repos\\Chatroom Studio™ Community\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj",
+      "projectPath": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj",
       "packagesPath": "C:\\Users\\cnua\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cnua\\source\\repos\\Chatroom Studio™ Community\\ChatroomStudioForWindows\\obj\\",
+      "outputPath": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\ChatroomStudioForWindows\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1820,8 +1820,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\cnua\\source\\repos\\Chatroom Studio™ Community\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj": {
-              "projectPath": "C:\\Users\\cnua\\source\\repos\\Chatroom Studio™ Community\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj"
+            "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj": {
+              "projectPath": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj"
             }
           }
         }

@@ -11,11 +11,11 @@ namespace CSR.Entities
 	{
 		public int? PostId { get; set; }
 		public Guid PostGuid { get; init; } = Guid.NewGuid();
-		public virtual ChatRecordSet? ChatRoom { get; set; }
+		//public virtual ChatRecordSet? ChatRoom { get; set; }
 		public DateTime? TimePosted { get; set; }
 		public string? MemberHandle { get; set; }
-		public string? Message { get; set; }
-		public string? Row { get; set; }
+		public string? Message { get; set; }=string.Empty;
+		public string? Row { get; set; }=string.Empty;
 		public PostType PostType { get; set; } = PostType.UNKNOWN;
 
 	}

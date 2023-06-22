@@ -180,7 +180,7 @@ namespace ChatroomStudioForWindows
 		{
 
 			var rs = new PostList(txtFilePath.Text);
-			rs.Load();
+			rs.LoadOriginalText();
 
 			dgvPosts.AutoGenerateColumns = true;
 

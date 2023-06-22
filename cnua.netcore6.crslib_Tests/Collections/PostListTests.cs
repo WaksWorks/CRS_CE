@@ -36,10 +36,13 @@ namespace CSR.Collections.Tests
 			pl.LoadOriginalText();
 			var count = pl.Count;
 			pl.SaveCSV();
-			pl.LoadJson();
+			var countcsv= pl.Count;
+			pl.Clear();
+			pl.LoadCSV();
 			var count2 = pl.Count;
 			//assert
-			Assert.True(count != count2);
+			Assert.True(count == count2);
+			Assert.True(count == countcsv);
 		}
 	}
 }
