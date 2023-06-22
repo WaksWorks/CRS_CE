@@ -52,11 +52,10 @@ namespace CSR.Entities.Extensions
 			//--
 			var pl= new PostList(f.FullName);
 			pl.LoadOriginalText();
-			
+			cr.PostList = pl;
 			var fl = new FilteredRowList(f.FullName);
 			fl.LoadOriginalText();
-
-
+			cr.FilteredRowList = fl;
 			//--
 			cr.IsLoaded = true;
 
