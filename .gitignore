@@ -481,3 +481,4 @@ $RECYCLE.BIN/
 /.vs/slnx.sqlite
 /cnua.netcore6.crslib/bin/Debug/waksworks.crslib.1.0.0.nupkg
 /ChatroomStudioForWindows/obj/Debug/net6.0-windows/ChatroomStudioForWindows.csproj.AssemblyReference.cache
+/ChatroomStudioForWindows/bin/Debug/net6.0-windows/ChatroomStudioForWindows.pdb
