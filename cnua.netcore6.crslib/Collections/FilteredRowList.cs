@@ -24,13 +24,13 @@ namespace CSR.Collections
 		/// <summary>
 		/// load filtered Rows Collection from file.
 		/// </summary>
-		public void Load()
+		public void LoadOriginalText()
 		{
 			var lines = File.ReadAllLines(_filePath);
 			var filtered = lines.GetFilteredRows().ToArray();
 			this.AddRange(filtered);
 		}
-		public void Save()
+		public void SaveJson()
 		{
 			var json = JsonSerializer.Serialize(this);
 			File.WriteAllText(_jsonFile, json);

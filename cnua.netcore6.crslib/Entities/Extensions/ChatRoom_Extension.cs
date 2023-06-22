@@ -49,7 +49,15 @@ namespace CSR.Entities.Extensions
 			cr.InputText = File.ReadAllText(f.FullName);
 			cr.FilteredRows = cr.InputText.Split(Environment.NewLine).GetFilteredRows();
 			cr.Posts = cr.FilteredRows.Select(r => r.ToPost()).Where(p => p != null).Select(p => p!).ToList<Post>();
+			//--
+			var pl= new PostList(f.FullName);
+			pl.LoadOriginalText();
+			
+			var fl = new FilteredRowList(f.FullName);
+			fl.LoadOriginalText();
 
+
+			//--
 			cr.IsLoaded = true;
 
 			return true;

@@ -14,16 +14,32 @@ namespace CSR.Collections.Tests
 		public void LoadOriginalTextTest()
 		{
 			//arrange
-			var path = @"C:\Users\cnua\source\repos\ChatroomStudioProto\ChatroomStudioProto\cnua.netcore6.crslibTests\Resources\WhatsApp Chat with Andy Obd.txt";	
+			var path = @"C:\Users\cnua\source\repos\ChatroomStudioProto\ChatroomStudioProto\cnua.netcore6.crslibTests\Resources\WhatsApp Chat with Andy Obd.txt";
 			//act
 			var pl = new PostList(path);
 			pl.LoadOriginalText();
-			var count=pl.Count;
-			pl.Save();
-			pl.Load();
-			var count2= pl.Count;
+			var count = pl.Count;
+			pl.SaveJson();
+			pl.LoadJson();
+			var count2 = pl.Count;
 			//assert
-			Assert.True(count!=count2);
+			Assert.True(count != count2);
+		}
+
+		[Fact()]
+		public void SaveToCSVTest()
+		{
+			//arrange
+			var path = @"C:\Users\cnua\source\repos\ChatroomStudioProto\ChatroomStudioProto\cnua.netcore6.crslibTests\Resources\WhatsApp Chat with Andy Obd.txt";
+			//act
+			var pl = new PostList(path);
+			pl.LoadOriginalText();
+			var count = pl.Count;
+			pl.SaveCSV();
+			pl.LoadJson();
+			var count2 = pl.Count;
+			//assert
+			Assert.True(count != count2);
 		}
 	}
 }

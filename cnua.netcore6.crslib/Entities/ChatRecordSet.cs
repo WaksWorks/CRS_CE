@@ -26,9 +26,16 @@ namespace CSR.Entities
 		/// </summary>
 		public IEnumerable<string> FilteredRows { get; set; } = new List<string>();
 		/// <summary>
+		/// Filtered Row List class
+		/// </summary>
+		public FilteredRowList? FilteredRowList { get; set; }
+		/// <summary>
 		/// transformed from rows
 		/// </summary>
 		public IEnumerable<Post> Posts { get; set; } = new List<Post>();
+		/// <summary>
+		/// post collection class
+		/// </summary>
 		public PostList? PostList { get; set; }
 		/// <summary>
 		/// Raw Input text

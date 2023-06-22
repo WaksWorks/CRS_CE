@@ -11,5 +11,6 @@ namespace CSR.Entities
         public int NameId { get; set; }
         public string? Phone { get; set; }
         public string? Message { get; set; }
-    }
+		public VoiceInfo? Voiceinfo { get; set; }
+	}
 }

@@ -1,4 +1,5 @@
-﻿using CSR.Entities;
+﻿using CSR.Collections;
+using CSR.Entities;
 using CsvHelper;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -21,7 +22,15 @@ namespace CSR.Entities.Extensions
                 csv.WriteRecords(posts);
             }
         }
-   }
+		public static void SaveToCSV(this PostList postList, string filePath)
+		{
+			using (StreamWriter writer = new StreamWriter(filePath))
+			using (CsvWriter csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+			{
+				csv.WriteRecords(postList);
+			}
+		}
+	}
     internal static class BucketList
     {
         public const string WhatsAppExportFileFilterPattern = @"WhatsApp Chat with?.txt";
