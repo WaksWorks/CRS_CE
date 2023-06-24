@@ -124,7 +124,7 @@ namespace CSR.Collections
 		{
 			var sourceFiles = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.wav");
 			var fileName = Path.GetFileNameWithoutExtension(_filePath);
-			ContatenateAudioPosts(fileName, sourceFiles);
+			ContatenateAudioPosts(fileName + @".wav", sourceFiles);
 
 		}
 		internal void ContatenateAudioPosts(string outputFile, IEnumerable<string> sourceFiles)
