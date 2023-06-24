@@ -55,8 +55,22 @@ namespace CSR.Collections.Tests
 			pl.LoadOriginalText();
 			pl.WriteAudioPosts();
 			//assert
-			Assert.True(pl.Posts.Count>0);
+			Assert.True(pl.Posts.Count > 0);
 
+		}
+
+		[Fact()]
+		public void ContatenateAudioPostsTest()
+		{
+			//arrange
+			var path = @"C:\Users\cnua\source\repos\crs_ce_fork\cnua.netcore6.crslib\FS\WhatsApp Chat with CrsExempR.txt";
+			//act
+			var pl = new PostList(path);
+			pl.LoadOriginalText();
+			pl.WriteAudioPosts();
+			pl.WriteAudioTranscription();
+			//assert
+			Assert.True(pl.Posts.Count > 0);
 		}
     }
 }

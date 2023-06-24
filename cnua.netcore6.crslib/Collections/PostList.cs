@@ -8,7 +8,8 @@ using System.IO;
 using System.Globalization;
 using System.Runtime.Serialization.Json;
 using System.Speech.Synthesis;
-
+using NAudio;
+using NAudio.Wave;
 
 namespace CSR.Collections
 {
@@ -20,6 +21,7 @@ namespace CSR.Collections
 		private readonly string _filePath;
 		private readonly string _jsonFile;
 		private readonly string _csvFile;
+		private readonly string _wavFile;
 		public List<Post> Posts { get; set; } = new List<Post>();
 		public string GetFilePath() => _filePath;
 		public PostList(string filePath)
@@ -27,6 +29,7 @@ namespace CSR.Collections
 			_filePath = filePath;
 			_jsonFile = Path.ChangeExtension(_filePath, ".json");
 			_csvFile = Path.ChangeExtension(_filePath, ".csv");
+			_wavFile = Path.ChangeExtension(_filePath, ".wav");
 			//Posts= new List<Post>();
 		}
 		public void LoadOriginalText()
@@ -114,6 +117,54 @@ namespace CSR.Collections
 				WriteAudioPost(post);
 			}
 		}
+		public void WriteAudioTranscription()
+		{
+			var sourceFiles = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.wav");
+			var fileName = Path.GetFileNameWithoutExtension(_filePath);
+			ContatenateAudioPosts(fileName, sourceFiles);
+
+		}
+		internal void ContatenateAudioPosts(string outputFile, IEnumerable<string> sourceFiles)
+		{
+			byte[] buffer = new byte[1024];
+			WaveFileWriter? waveFileWriter = null;
+
+			try
+			{
+				foreach (string sourceFile in sourceFiles)
+				{
+					using (WaveFileReader reader = new WaveFileReader(sourceFile))
+					{
+						if (waveFileWriter == null)
+						{
+							// first time in create new Writer
+							waveFileWriter = new WaveFileWriter(outputFile, reader.WaveFormat);
+						}
+						else
+						{
+							if (!reader.WaveFormat.Equals(waveFileWriter.WaveFormat))
+							{
+								throw new InvalidOperationException("Can't concatenate WAV Files that don't share the same format");
+							}
+						}
+
+						int read;
+						while ((read = reader.Read(buffer, 0, buffer.Length)) > 0)
+						{
+							waveFileWriter.Write(buffer, 0, read);
+						}
+					}
+				}
+			}
+			finally
+			{
+				if (waveFileWriter != null)
+				{
+					waveFileWriter.Dispose();
+				}
+			}
+
+		}
 		/// <summary>
 		/// return list of installed voices
 		/// </summary>
@@ -149,8 +200,8 @@ namespace CSR.Collections
 			foreach (var member in members)
 			{
 				var voiceName = voices[voiceIndex];
-				rate= random.Next(1, 3);
-				SetVoiceNames(member, voiceName,rate);
+				rate = random.Next(1, 3);
+				SetVoiceNames(member, voiceName, rate);
 				voiceIndex++;
 				if (voiceIndex >= voiceCount)
 				{
