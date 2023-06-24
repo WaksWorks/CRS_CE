@@ -198,9 +198,9 @@ namespace ChatroomStudioForWindows
 			var p = (Post)dgvPosts.Rows[e.RowIndex].DataBoundItem;
 			txtPostContent.Text = p.Message;
 			txtMemberHandle.Text = p.MemberHandle;
-			monthCalendar1.SetDate(p.TimePosted.Value);
+			monthCalendar1.SetDate(p.TimePosted.GetValueOrDefault());
 			//set p.timeposted to a winform control
-			//dtpPostDate.Value = p.TimePosted.Value;
+			dtpPostDate.Value = p.TimePosted.GetValueOrDefault();
 
 		}
 
@@ -217,6 +217,38 @@ namespace ChatroomStudioForWindows
 		private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
 		{
 
+		}
+
+		private void btnSaveLines_Click(object sender, EventArgs e)
+		{
+			File.WriteAllLines(Path.ChangeExtension(txtFilePath.Text, ".crslines"), txtWhatsAppFile.Lines);
+		}
+
+		private void bbtnSaveFilteredRows_Click(object sender, EventArgs e)
+		{
+			var fl = new FilteredRowList(txtFilePath.Text);
+			fl.LoadOriginalText();
+			fl.SaveJson();
+		}
+
+		private void btnSavePosts_Click(object sender, EventArgs e)
+		{
+			var pl = new PostList(txtFilePath.Text);
+			pl.LoadOriginalText();
+			pl.SaveJson();
+			pl.SaveCSV();
+		}
+
+		private void btnSaveAllPacked_Click(object sender, EventArgs e)
+		{
+			var pl = new PostList(txtFilePath.Text);
+			pl.LoadOriginalText();
+			pl.SaveJson();
+			pl.SaveCSV();
+			var fl = new FilteredRowList(txtFilePath.Text);
+			fl.LoadOriginalText();
+			fl.SaveJson();
+			`
 		}
 	}
 }

@@ -71,6 +71,7 @@
 			btnSaveLines = new Button();
 			tabpToFilteredRows = new TabPage();
 			tabpToPosts = new TabPage();
+			monthCalendar1 = new MonthCalendar();
 			dgvPosts = new DataGridView();
 			btnSavePosts = new Button();
 			tabpAudioSettings = new TabPage();
@@ -81,7 +82,8 @@
 			saveFileDialog1 = new SaveFileDialog();
 			timer1 = new System.Windows.Forms.Timer(components);
 			tooltTransitions = new ToolTip(components);
-			monthCalendar1 = new MonthCalendar();
+			tabpPackage = new TabPage();
+			btnSaveAllPacked = new Button();
 			grpAdjustments.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)TrackBar2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)TrackBar1).BeginInit();
@@ -100,6 +102,7 @@
 			((System.ComponentModel.ISupportInitialize)dgvPosts).BeginInit();
 			tabpAudioSettings.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
+			tabpPackage.SuspendLayout();
 			SuspendLayout();
 			// 
 			// txtTextToSpeak
@@ -244,6 +247,7 @@
 			bbtnSaveFilteredRows.TabIndex = 28;
 			bbtnSaveFilteredRows.Text = "Save Filter Rows";
 			bbtnSaveFilteredRows.UseVisualStyleBackColor = true;
+			bbtnSaveFilteredRows.Click += bbtnSaveFilteredRows_Click;
 			// 
 			// btnFilterRows
 			// 
@@ -444,6 +448,7 @@
 			tabControl1.Controls.Add(tabpToFilteredRows);
 			tabControl1.Controls.Add(tabpToPosts);
 			tabControl1.Controls.Add(tabpAudioSettings);
+			tabControl1.Controls.Add(tabpPackage);
 			tabControl1.Location = new Point(27, 12);
 			tabControl1.Name = "tabControl1";
 			tabControl1.SelectedIndex = 0;
@@ -483,6 +488,7 @@
 			btnSaveLines.TabIndex = 27;
 			btnSaveLines.Text = "Save Lines";
 			btnSaveLines.UseVisualStyleBackColor = true;
+			btnSaveLines.Click += btnSaveLines_Click;
 			// 
 			// tabpToFilteredRows
 			// 
@@ -515,6 +521,13 @@
 			tabpToPosts.Text = "To Posts";
 			tabpToPosts.UseVisualStyleBackColor = true;
 			// 
+			// monthCalendar1
+			// 
+			monthCalendar1.Location = new Point(441, 96);
+			monthCalendar1.Name = "monthCalendar1";
+			monthCalendar1.TabIndex = 31;
+			monthCalendar1.DateChanged += monthCalendar1_DateChanged;
+			// 
 			// dgvPosts
 			// 
 			dgvPosts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -534,6 +547,7 @@
 			btnSavePosts.TabIndex = 29;
 			btnSavePosts.Text = "Save Posts";
 			btnSavePosts.UseVisualStyleBackColor = true;
+			btnSavePosts.Click += btnSavePosts_Click;
 			// 
 			// tabpAudioSettings
 			// 
@@ -556,12 +570,27 @@
 			tooltTransitions.ToolTipTitle = "Transition Help";
 			tooltTransitions.Popup += tooltTransitions_Popup;
 			// 
-			// monthCalendar1
+			// tabpPackage
 			// 
-			monthCalendar1.Location = new Point(441, 96);
-			monthCalendar1.Name = "monthCalendar1";
-			monthCalendar1.TabIndex = 31;
-			monthCalendar1.DateChanged += monthCalendar1_DateChanged;
+			tabpPackage.Controls.Add(btnSaveAllPacked);
+			tabpPackage.Location = new Point(4, 24);
+			tabpPackage.Name = "tabpPackage";
+			tabpPackage.Padding = new Padding(3);
+			tabpPackage.Size = new Size(680, 700);
+			tabpPackage.TabIndex = 5;
+			tabpPackage.Text = "Package";
+			tabpPackage.UseVisualStyleBackColor = true;
+			// 
+			// btnSaveAllPacked
+			// 
+			btnSaveAllPacked.AutoSize = true;
+			btnSaveAllPacked.Location = new Point(427, 66);
+			btnSaveAllPacked.Name = "btnSaveAllPacked";
+			btnSaveAllPacked.Size = new Size(156, 25);
+			btnSaveAllPacked.TabIndex = 1;
+			btnSaveAllPacked.Text = "Save All";
+			btnSaveAllPacked.UseVisualStyleBackColor = true;
+			btnSaveAllPacked.Click += btnSaveAllPacked_Click;
 			// 
 			// Form1
 			// 
@@ -597,6 +626,8 @@
 			((System.ComponentModel.ISupportInitialize)dgvPosts).EndInit();
 			tabpAudioSettings.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
+			tabpPackage.ResumeLayout(false);
+			tabpPackage.PerformLayout();
 			ResumeLayout(false);
 		}
 
@@ -655,5 +686,7 @@
 		private System.Windows.Forms.Timer timer1;
 		private ToolTip tooltTransitions;
 		private MonthCalendar monthCalendar1;
+		private TabPage tabpPackage;
+		private Button btnSaveAllPacked;
 	}
 }

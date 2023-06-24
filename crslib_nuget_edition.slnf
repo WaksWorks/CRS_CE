@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "path": "cnua.netcore6.crslib.sln",
+    "projects": [
+      "ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj",
+      "cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj",
+      "cnua.netcore6.crslib_Tests\\cnua.netcore6.crslib_Tests.csproj"
+    ]
+  }
+}
