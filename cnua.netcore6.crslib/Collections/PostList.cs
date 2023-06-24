@@ -149,7 +149,7 @@ namespace CSR.Collections
 			foreach (var member in members)
 			{
 				var voiceName = voices[voiceIndex];
-				rate= random.Next(1, 10);
+				rate= random.Next(1, 3);
 				SetVoiceNames(member, voiceName,rate);
 				voiceIndex++;
 				if (voiceIndex >= voiceCount)
