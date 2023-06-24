@@ -117,6 +117,9 @@ namespace CSR.Collections
 				WriteAudioPost(post);
 			}
 		}
+		/// <summary>
+		/// contatenate audio posts to single wave file
+		/// </summary>
 		public void WriteAudioTranscription()
 		{
 			var sourceFiles = Directory.GetFiles(Directory.GetCurrentDirectory(), "*.wav");
