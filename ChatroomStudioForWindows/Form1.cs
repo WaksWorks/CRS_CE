@@ -76,6 +76,8 @@ namespace ChatroomStudioForWindows
 			{
 				foreach (var voice in synth.GetInstalledVoices())
 				{
+					VoiceInfo info = voice.VoiceInfo;
+					string strId = voice.VoiceInfo.Id;
 					ddlVoices.Items.Add(voice.VoiceInfo.Name);
 				}
 			}
@@ -195,12 +197,19 @@ namespace ChatroomStudioForWindows
 		private void dgvPosts_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
 			//load post members to seperate controls
+			//char nl = '\n';
 			var p = (Post)dgvPosts.Rows[e.RowIndex].DataBoundItem;
 			txtPostContent.Text = p.Message;
+			txtTextToSpeak.Text = p.Message;
 			txtMemberHandle.Text = p.MemberHandle;
-			monthCalendar1.SetDate(p.TimePosted.GetValueOrDefault());
-			//set p.timeposted to a winform control
 			dtpPostDate.Value = p.TimePosted.GetValueOrDefault();
+			//TODO: set to a winform control
+			txtGuid.Text = p.PostGuid.ToString();
+			txtToWaveFile.Text = p.PostGuid.ToString().Replace("-", "") + @".wav";
+			nddPostIndex.Text = p.PostId.ToString();
+			ddlVoices.Text = p.VoiceName;
+			//txtPostContent.Text += p.ToRow() + nl;
+			//txtPostContent.Text += p.PostType.GetType().ToString() + nl;
 
 		}
 
@@ -248,7 +257,17 @@ namespace ChatroomStudioForWindows
 			var fl = new FilteredRowList(txtFilePath.Text);
 			fl.LoadOriginalText();
 			fl.SaveJson();
-			`
+
+		}
+
+		private void btnNewPost_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnSetVoiceToMemberHandle_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

@@ -14,6 +14,8 @@ namespace CSR.Entities
 		//public virtual ChatRecordSet? ChatRoom { get; set; }
 		public DateTime? TimePosted { get; set; }
 		public string? MemberHandle { get; set; }
+		public string? VoiceName { get; set; }=string.Empty;
+		public int VoiceRate{ get; set; } = 4;
 		public string? Message { get; set; }=string.Empty;
 		public string? Row { get; set; }=string.Empty;
 		public PostType PostType { get; set; } = PostType.UNKNOWN;

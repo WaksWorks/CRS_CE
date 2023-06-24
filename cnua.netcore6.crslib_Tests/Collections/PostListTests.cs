@@ -36,7 +36,7 @@ namespace CSR.Collections.Tests
 			pl.LoadOriginalText();
 			var count = pl.Count;
 			pl.SaveCSV();
-			var countcsv= pl.Count;
+			var countcsv = pl.Count;
 			pl.Clear();
 			pl.LoadCSV();
 			var count2 = pl.Count;
@@ -44,5 +44,19 @@ namespace CSR.Collections.Tests
 			Assert.True(count == count2);
 			Assert.True(count == countcsv);
 		}
-	}
+
+		[Fact()]
+		public void WriteAudioPostsTest()
+		{
+			//arrange
+			var path = @"C:\Users\cnua\source\repos\ChatroomStudioProto\ChatroomStudioProto\cnua.netcore6.crslibTests\Resources\WhatsApp Chat with Andy Obd.txt";
+			//act
+			var pl = new PostList(path);
+			pl.LoadOriginalText();
+			pl.WriteAudioPosts();
+			//assert
+			Assert.True(pl.Posts.Count>0);
+
+		}
+    }
 }

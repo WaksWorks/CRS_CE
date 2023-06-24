@@ -47,7 +47,6 @@
 			btnLoadPosts = new Button();
 			btnToRows = new Button();
 			txtMemberHandle = new TextBox();
-			chkPostType = new CheckedListBox();
 			nddPostIndex = new NumericUpDown();
 			txtPostContent = new TextBox();
 			lblMemberHandle = new Label();
@@ -66,15 +65,18 @@
 			openFileDialog1 = new OpenFileDialog();
 			bdsLines = new BindingSource(components);
 			tabControl1 = new TabControl();
+			tabpNewPostItem = new TabPage();
 			tabpLoadInputText = new TabPage();
 			tabpToLines = new TabPage();
 			btnSaveLines = new Button();
 			tabpToFilteredRows = new TabPage();
 			tabpToPosts = new TabPage();
-			monthCalendar1 = new MonthCalendar();
+			txtGuid = new TextBox();
 			dgvPosts = new DataGridView();
 			btnSavePosts = new Button();
 			tabpAudioSettings = new TabPage();
+			tabpPackage = new TabPage();
+			btnSaveAllPacked = new Button();
 			helpProvider1 = new HelpProvider();
 			fileSystemWatcher1 = new FileSystemWatcher();
 			folderBrowserDialog1 = new FolderBrowserDialog();
@@ -82,8 +84,7 @@
 			saveFileDialog1 = new SaveFileDialog();
 			timer1 = new System.Windows.Forms.Timer(components);
 			tooltTransitions = new ToolTip(components);
-			tabpPackage = new TabPage();
-			btnSaveAllPacked = new Button();
+			btnSetVoiceToMemberHandle = new Button();
 			grpAdjustments.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)TrackBar2).BeginInit();
 			((System.ComponentModel.ISupportInitialize)TrackBar1).BeginInit();
@@ -101,8 +102,8 @@
 			tabpToPosts.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)dgvPosts).BeginInit();
 			tabpAudioSettings.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
 			tabpPackage.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
 			SuspendLayout();
 			// 
 			// txtTextToSpeak
@@ -171,9 +172,9 @@
 			// ddlVoices
 			// 
 			ddlVoices.FormattingEnabled = true;
-			ddlVoices.Location = new Point(28, 363);
+			ddlVoices.Location = new Point(37, 287);
 			ddlVoices.Name = "ddlVoices";
-			ddlVoices.Size = new Size(540, 23);
+			ddlVoices.Size = new Size(427, 23);
 			ddlVoices.TabIndex = 7;
 			// 
 			// BtnSpeak
@@ -231,6 +232,8 @@
 			// 
 			// dgvFilteredRows
 			// 
+			dgvFilteredRows.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+			dgvFilteredRows.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
 			dgvFilteredRows.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dgvFilteredRows.Location = new Point(31, 47);
 			dgvFilteredRows.Name = "dgvFilteredRows";
@@ -284,40 +287,32 @@
 			// 
 			// txtMemberHandle
 			// 
-			txtMemberHandle.Location = new Point(173, 66);
+			txtMemberHandle.Location = new Point(37, 54);
 			txtMemberHandle.Name = "txtMemberHandle";
-			txtMemberHandle.Size = new Size(257, 23);
+			txtMemberHandle.Size = new Size(200, 23);
 			txtMemberHandle.TabIndex = 21;
 			txtMemberHandle.Text = "memberHandle_sadamski";
 			// 
-			// chkPostType
-			// 
-			chkPostType.FormattingEnabled = true;
-			chkPostType.Location = new Point(37, 96);
-			chkPostType.Name = "chkPostType";
-			chkPostType.Size = new Size(120, 166);
-			chkPostType.TabIndex = 19;
-			// 
 			// nddPostIndex
 			// 
-			nddPostIndex.Location = new Point(441, 67);
+			nddPostIndex.Location = new Point(254, 28);
 			nddPostIndex.Name = "nddPostIndex";
-			nddPostIndex.Size = new Size(227, 23);
+			nddPostIndex.Size = new Size(43, 23);
 			nddPostIndex.TabIndex = 18;
 			// 
 			// txtPostContent
 			// 
-			txtPostContent.Location = new Point(173, 96);
+			txtPostContent.Location = new Point(37, 96);
 			txtPostContent.Multiline = true;
 			txtPostContent.Name = "txtPostContent";
-			txtPostContent.Size = new Size(257, 166);
+			txtPostContent.Size = new Size(631, 166);
 			txtPostContent.TabIndex = 16;
 			txtPostContent.Text = "WaksWorks presents Chatroom Studio Editor for windows";
 			// 
 			// lblMemberHandle
 			// 
 			lblMemberHandle.AutoSize = true;
-			lblMemberHandle.Location = new Point(274, 48);
+			lblMemberHandle.Location = new Point(37, 78);
 			lblMemberHandle.Name = "lblMemberHandle";
 			lblMemberHandle.Size = new Size(90, 15);
 			lblMemberHandle.TabIndex = 15;
@@ -325,9 +320,10 @@
 			// 
 			// dtpPostDate
 			// 
-			dtpPostDate.Location = new Point(37, 67);
+			dtpPostDate.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+			dtpPostDate.Location = new Point(37, 25);
 			dtpPostDate.Name = "dtpPostDate";
-			dtpPostDate.Size = new Size(120, 23);
+			dtpPostDate.Size = new Size(200, 23);
 			dtpPostDate.TabIndex = 14;
 			dtpPostDate.ValueChanged += dtpPostDate_ValueChanged;
 			// 
@@ -350,6 +346,7 @@
 			btnNewPost.TabIndex = 20;
 			btnNewPost.Text = "Record";
 			btnNewPost.UseVisualStyleBackColor = false;
+			btnNewPost.Click += btnNewPost_Click;
 			// 
 			// grpSynth
 			// 
@@ -360,7 +357,6 @@
 			grpSynth.Controls.Add(BtnSpeak);
 			grpSynth.Controls.Add(lblVoice);
 			grpSynth.Controls.Add(chkRecord);
-			grpSynth.Controls.Add(ddlVoices);
 			grpSynth.Controls.Add(txtToWaveFile);
 			grpSynth.ForeColor = SystemColors.ActiveBorder;
 			grpSynth.Location = new Point(29, 33);
@@ -443,6 +439,7 @@
 			// 
 			// tabControl1
 			// 
+			tabControl1.Controls.Add(tabpNewPostItem);
 			tabControl1.Controls.Add(tabpLoadInputText);
 			tabControl1.Controls.Add(tabpToLines);
 			tabControl1.Controls.Add(tabpToFilteredRows);
@@ -453,7 +450,18 @@
 			tabControl1.Name = "tabControl1";
 			tabControl1.SelectedIndex = 0;
 			tabControl1.Size = new Size(688, 728);
+			tabControl1.SizeMode = TabSizeMode.FillToRight;
 			tabControl1.TabIndex = 23;
+			// 
+			// tabpNewPostItem
+			// 
+			tabpNewPostItem.Location = new Point(4, 24);
+			tabpNewPostItem.Name = "tabpNewPostItem";
+			tabpNewPostItem.Padding = new Padding(3);
+			tabpNewPostItem.Size = new Size(680, 700);
+			tabpNewPostItem.TabIndex = 6;
+			tabpNewPostItem.Text = "New Post Item";
+			tabpNewPostItem.UseVisualStyleBackColor = true;
 			// 
 			// tabpLoadInputText
 			// 
@@ -503,7 +511,9 @@
 			// 
 			// tabpToPosts
 			// 
-			tabpToPosts.Controls.Add(monthCalendar1);
+			tabpToPosts.Controls.Add(btnSetVoiceToMemberHandle);
+			tabpToPosts.Controls.Add(txtGuid);
+			tabpToPosts.Controls.Add(ddlVoices);
 			tabpToPosts.Controls.Add(dgvPosts);
 			tabpToPosts.Controls.Add(txtPostContent);
 			tabpToPosts.Controls.Add(dtpPostDate);
@@ -511,7 +521,6 @@
 			tabpToPosts.Controls.Add(txtMemberHandle);
 			tabpToPosts.Controls.Add(btnSavePosts);
 			tabpToPosts.Controls.Add(lblMemberHandle);
-			tabpToPosts.Controls.Add(chkPostType);
 			tabpToPosts.Controls.Add(nddPostIndex);
 			tabpToPosts.Location = new Point(4, 24);
 			tabpToPosts.Name = "tabpToPosts";
@@ -521,20 +530,20 @@
 			tabpToPosts.Text = "To Posts";
 			tabpToPosts.UseVisualStyleBackColor = true;
 			// 
-			// monthCalendar1
+			// txtGuid
 			// 
-			monthCalendar1.Location = new Point(441, 96);
-			monthCalendar1.Name = "monthCalendar1";
-			monthCalendar1.TabIndex = 31;
-			monthCalendar1.DateChanged += monthCalendar1_DateChanged;
+			txtGuid.Location = new Point(254, 57);
+			txtGuid.Name = "txtGuid";
+			txtGuid.Size = new Size(210, 23);
+			txtGuid.TabIndex = 31;
 			// 
 			// dgvPosts
 			// 
 			dgvPosts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dgvPosts.Location = new Point(37, 277);
+			dgvPosts.Location = new Point(37, 337);
 			dgvPosts.Name = "dgvPosts";
 			dgvPosts.RowTemplate.Height = 25;
-			dgvPosts.Size = new Size(631, 365);
+			dgvPosts.Size = new Size(631, 305);
 			dgvPosts.TabIndex = 30;
 			dgvPosts.CellContentClick += dgvPosts_CellContentClick;
 			// 
@@ -559,17 +568,6 @@
 			tabpAudioSettings.Text = "Audio Settings";
 			tabpAudioSettings.UseVisualStyleBackColor = true;
 			// 
-			// fileSystemWatcher1
-			// 
-			fileSystemWatcher1.EnableRaisingEvents = true;
-			fileSystemWatcher1.SynchronizingObject = this;
-			// 
-			// tooltTransitions
-			// 
-			tooltTransitions.ToolTipIcon = ToolTipIcon.Info;
-			tooltTransitions.ToolTipTitle = "Transition Help";
-			tooltTransitions.Popup += tooltTransitions_Popup;
-			// 
 			// tabpPackage
 			// 
 			tabpPackage.Controls.Add(btnSaveAllPacked);
@@ -592,12 +590,33 @@
 			btnSaveAllPacked.UseVisualStyleBackColor = true;
 			btnSaveAllPacked.Click += btnSaveAllPacked_Click;
 			// 
+			// fileSystemWatcher1
+			// 
+			fileSystemWatcher1.EnableRaisingEvents = true;
+			fileSystemWatcher1.SynchronizingObject = this;
+			// 
+			// tooltTransitions
+			// 
+			tooltTransitions.ToolTipIcon = ToolTipIcon.Info;
+			tooltTransitions.ToolTipTitle = "Transition Help";
+			tooltTransitions.Popup += tooltTransitions_Popup;
+			// 
+			// btnSetVoiceToMemberHandle
+			// 
+			btnSetVoiceToMemberHandle.Location = new Point(470, 287);
+			btnSetVoiceToMemberHandle.Name = "btnSetVoiceToMemberHandle";
+			btnSetVoiceToMemberHandle.Size = new Size(198, 23);
+			btnSetVoiceToMemberHandle.TabIndex = 32;
+			btnSetVoiceToMemberHandle.Text = "Set Voice Name To MemberHandle";
+			btnSetVoiceToMemberHandle.UseVisualStyleBackColor = true;
+			btnSetVoiceToMemberHandle.Click += btnSetVoiceToMemberHandle_Click;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.RoyalBlue;
-			ClientSize = new Size(744, 770);
+			ClientSize = new Size(1373, 770);
 			Controls.Add(tabControl1);
 			Name = "Form1";
 			Text = "Form1";
@@ -625,9 +644,9 @@
 			tabpToPosts.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)dgvPosts).EndInit();
 			tabpAudioSettings.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
 			tabpPackage.ResumeLayout(false);
 			tabpPackage.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
 			ResumeLayout(false);
 		}
 
@@ -648,7 +667,6 @@
 		private DateTimePicker dtpPostDate;
 		private DataGridView dgvChatroomTextLines;
 		private TextBox txtMemberHandle;
-		private CheckedListBox chkPostType;
 		private NumericUpDown nddPostIndex;
 		private TextBox txtPostContent;
 		private Label lblMemberHandle;
@@ -685,8 +703,10 @@
 		private SaveFileDialog saveFileDialog1;
 		private System.Windows.Forms.Timer timer1;
 		private ToolTip tooltTransitions;
-		private MonthCalendar monthCalendar1;
 		private TabPage tabpPackage;
 		private Button btnSaveAllPacked;
+		private TabPage tabpNewPostItem;
+		private TextBox txtGuid;
+		private Button btnSetVoiceToMemberHandle;
 	}
 }

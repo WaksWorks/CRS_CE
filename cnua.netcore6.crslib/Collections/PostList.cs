@@ -7,18 +7,20 @@ using CSR.Entities.Extensions;
 using System.IO;
 using System.Globalization;
 using System.Runtime.Serialization.Json;
+using System.Speech.Synthesis;
+
 
 namespace CSR.Collections
 {
 	/// <summary>
 	/// Collection of Posts
 	/// </summary>
-	public class PostList: List<Post>
+	public class PostList : List<Post>
 	{
 		private readonly string _filePath;
 		private readonly string _jsonFile;
 		private readonly string _csvFile;
-		public List<Post> Posts { get; set; }= new List<Post>();
+		public List<Post> Posts { get; set; } = new List<Post>();
 		public string GetFilePath() => _filePath;
 		public PostList(string filePath)
 		{
@@ -62,6 +64,98 @@ namespace CSR.Collections
 			{
 				var posts = csv.GetRecords<Post>().ToArray();
 				this.AddRange(posts);
+			}
+		}
+		/// <summary>
+		/// map member handles to synth voice name and voice rate
+		/// </summary>
+		/// <param name="memberHandle"></param>
+		/// <param name="voiceName"></param>
+		/// <param name="VoiceRate"></param>
+		internal void SetVoiceNames(string? memberHandle, string voiceName, int VoiceRate)
+		{
+			foreach (var post in Posts)
+			{
+				if (post.MemberHandle == memberHandle)
+				{
+					post.VoiceName = voiceName;
+					post.VoiceRate = VoiceRate;
+				}
+			}
+		}
+		/// <summary>
+		/// write audio of post to wave file
+		/// </summary>
+		/// <param name="post"></param>
+		private void WriteAudioPost(Post post)
+		{
+			using (SpeechSynthesizer synth = new SpeechSynthesizer
+			{
+				Rate = post.VoiceRate
+			})
+			{
+				// Configure the audio output. 
+				synth.SetOutputToWaveFile(post.PostGuid.ToString().Replace("-", "_") + @".wav");
+				{
+					synth.SelectVoice(post.VoiceName);
+					synth.Speak(post.Message);
+				}
+			}
+		}
+		/// <summary>
+		/// batch write audio posts to wave files
+		/// </summary>
+		public void WriteAudioPosts()
+		{
+			AutoConfigVoices();
+
+			foreach (var post in Posts)
+			{
+				WriteAudioPost(post);
+			}
+		}
+		/// <summary>
+		/// return list of installed voices
+		/// </summary>
+		/// <returns></returns>
+		internal List<string> GetInstalledVoicesToList()
+		{
+			List<string> voices = new List<string>();
+			using (SpeechSynthesizer synth = new SpeechSynthesizer())
+			{
+				foreach (var voice in synth.GetInstalledVoices())
+				{
+					VoiceInfo info = voice.VoiceInfo;
+					string strId = voice.VoiceInfo.Id;
+					voices.Add(voice.VoiceInfo.Name);
+				}
+				return voices;
+			}
+
+		}
+		/// <summary>
+		/// auto config voices for each member
+		/// </summary>
+		internal void AutoConfigVoices()
+		{
+			var members = Posts.Select(p => p.MemberHandle).Distinct();
+			var voices = GetInstalledVoicesToList();
+			var voiceCount = voices.Count();
+			var memberCount = members.Count();
+			var voiceIndex = 0;
+			//var memberIndex = 0;
+			var random = new Random();
+			var rate = 0;
+			foreach (var member in members)
+			{
+				var voiceName = voices[voiceIndex];
+				rate= random.Next(1, 10);
+				SetVoiceNames(member, voiceName,rate);
+				voiceIndex++;
+				if (voiceIndex >= voiceCount)
+				{
+					voiceIndex = 0;
+				}
 			}
 		}
 	}
