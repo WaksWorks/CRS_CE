@@ -157,6 +157,7 @@ namespace CSR.Collections
 							waveFileWriter.Write(buffer, 0, read);
 						}
 					}
+					File.Delete(sourceFile);
 				}
 			}
 			finally
