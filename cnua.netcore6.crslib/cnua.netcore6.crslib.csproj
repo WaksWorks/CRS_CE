@@ -44,6 +44,7 @@
     <Compile Remove="IO\IOExtractionEngine.cs" />
     <Compile Remove="IO\IOSpeech.cs" />
     <Compile Remove="IO\IOTransformEngine.cs" />
+    <Compile Remove="Program_old.cs" />
   </ItemGroup>
 
   <ItemGroup>
