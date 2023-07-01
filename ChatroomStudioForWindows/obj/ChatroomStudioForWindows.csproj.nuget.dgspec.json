@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj": {}
+    "C:\\Users\\cnua\\Source\\Repos\\crs_ce_fork\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj": {
+    "C:\\Users\\cnua\\Source\\Repos\\crs_ce_fork\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj",
+        "projectUniqueName": "C:\\Users\\cnua\\Source\\Repos\\crs_ce_fork\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj",
         "projectName": "ChatroomStudioForWindows",
-        "projectPath": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj",
+        "projectPath": "C:\\Users\\cnua\\Source\\Repos\\crs_ce_fork\\ChatroomStudioForWindows\\ChatroomStudioForWindows.csproj",
         "packagesPath": "C:\\Users\\cnua\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\ChatroomStudioForWindows\\obj\\",
         "projectStyle": "PackageReference",
@@ -33,8 +33,8 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj": {
-                "projectPath": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj"
+              "C:\\Users\\cnua\\Source\\Repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj": {
+                "projectPath": "C:\\Users\\cnua\\Source\\Repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj"
               }
             }
           }
@@ -77,12 +77,12 @@
         }
       }
     },
-    "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj": {
+    "C:\\Users\\cnua\\Source\\Repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj",
+        "projectUniqueName": "C:\\Users\\cnua\\Source\\Repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj",
         "projectName": "waksworks.crslib",
-        "projectPath": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj",
+        "projectPath": "C:\\Users\\cnua\\Source\\Repos\\crs_ce_fork\\cnua.netcore6.crslib\\cnua.netcore6.crslib.csproj",
         "packagesPath": "C:\\Users\\cnua\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\cnua\\source\\repos\\crs_ce_fork\\cnua.netcore6.crslib\\obj\\",
         "projectStyle": "PackageReference",
