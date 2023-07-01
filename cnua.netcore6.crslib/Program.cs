@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using CSR.Entities.Extensions;
 using CSR.Collections;
+using System.IO;
 
 internal class Program
 {
@@ -20,8 +21,8 @@ internal class Program
         Option<FileInfo> fileOption = new Option<FileInfo>(name: "--file",
             description: @"The WhatsApp Chat Export file to read and transform \n" +
             "into Chatroom Studio assets\n" +
-            ".csv, .wav, .waksx, .crsbx, .obdx");
-        RootCommand rootCommand = new RootCommand("Write Chatroom Studio FS Assets");
+            ".csv, .wav, .txt");
+        RootCommand rootCommand = new RootCommand("Write transcripts");
         rootCommand.AddAlias(@"-f");
         rootCommand.AddOption(fileOption);
 
@@ -33,10 +34,10 @@ internal class Program
 
         return await rootCommand.InvokeAsync(args);
     }
-    internal static void WriteCSV(object path)
+    internal static void WriteCSV(FileInfo fi)
     {
         Console.WriteLine("Writing  Files");
-        PostList pl = new PostList(path);
+        PostList pl = new PostList(fi.FullName);
         pl.SaveOriginalText();
         pl.LoadOriginalText();
         pl.SaveCSV();
