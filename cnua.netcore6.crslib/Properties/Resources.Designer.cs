@@ -71,6 +71,24 @@ namespace CSR.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to WaksWorks™ Presents a Chatroom Studio™ Chat tTo Podcast Audio Transcription.
+        /// </summary>
+        internal static string PresentationWaksWorksPresents {
+            get {
+                return ResourceManager.GetString("PresentationWaksWorksPresents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WhatsApp Chat With CO88.txt.
+        /// </summary>
+        internal static string SampleFileName {
+            get {
+                return ResourceManager.GetString("SampleFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 23/04/2023, 20:53 - Messages and calls are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them. Tap to learn more.
         ///23/04/2023, 20:53 - Wole Solanke created group &quot;Product development&quot;
         ///23/04/2023, 20:53 - Wole Solanke added you
@@ -94,7 +112,7 @@ namespace CSR.Properties {
         ///23/04/2023, 20:53 - Wole Solanke changed the subject from &quot;Product development&quot; to &quot;KaraSell&quot;
         ///23/04/2023, 20:54 - Wole Solanke: Got ya
         ///23/04/2023, 20:59 - W2W3: Hey!
-        ///23/04/2023, 21:03 - W2W3: Is t [rest of string was truncated]&quot;;.
+        ///23/04/2023, 21:03 - W2W [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string WhatsApp_Chat_with_KaraSell {
             get {
@@ -109,7 +127,7 @@ namespace CSR.Properties {
         ///17/05/2023, 01:14 - Olu Eko: Alright cool
         ///17/05/2023, 01:15 - Chatroom Studios: What&apos;s your email?
         ///17/05/2023, 01:15 - Olu Eko: Oyedun2010@gmail.com
-        ///17/05/2023, 01:16 - Olu Eko: How many bedroom for the house? I mean for the accomm [rest of string was truncated]&quot;;.
+        ///17/05/2023, 01:16 - Olu Eko: How many bedroom for the house? I mean for the  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string WhatsApp_Chat_with_Olu_Eko {
             get {

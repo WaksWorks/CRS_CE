@@ -34,7 +34,7 @@ namespace CSR.Collections.Tests
 			//act
 			var pl = new PostList(path);
 			pl.LoadOriginalText();
-			pl.AutoConfigVoices();
+			//pl.AutoConfigVoices();
 			var count = pl.Count;
 			pl.SaveCSV();
 			var countcsv = pl.Count;

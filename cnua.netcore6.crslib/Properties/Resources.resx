@@ -121,6 +121,12 @@
   <data name="favico.ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\favico.ico.ico;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="PresentationWaksWorksPresents" xml:space="preserve">
+    <value>WaksWorks™ Presents a Chatroom Studio™ Chat tTo Podcast Audio Transcription</value>
+  </data>
+  <data name="SampleFileName" xml:space="preserve">
+    <value>WhatsApp Chat With CO88.txt</value>
+  </data>
   <data name="TestInput.txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\FS\WhatsApp Chat with CrsExempR.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>

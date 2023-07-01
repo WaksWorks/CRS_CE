@@ -13,7 +13,7 @@
     <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
     <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>Chatroom Studio by WaksWorks™</Title>
+    <Title>Chatroom Studio™ by WaksWorks™</Title>
     <Authors>Wakeelu Mamudu</Authors>
     <Company>WaksWorks Lambeth London England</Company>
     <Product>crslib</Product>
@@ -28,6 +28,7 @@
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <PackageId>waksworks.crslib</PackageId>
     <Configurations>Debug;Release;crslib_build</Configurations>
+    <Version>$(crs_ce)</Version>
   </PropertyGroup>
 
   <ItemGroup>

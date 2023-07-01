@@ -10,6 +10,7 @@ using System.Runtime.Serialization.Json;
 using System.Speech.Synthesis;
 using NAudio;
 using NAudio.Wave;
+using CSR.Properties;
 
 namespace CSR.Collections
 {
@@ -46,7 +47,12 @@ namespace CSR.Collections
 			var json = JsonSerializer.Serialize(Posts);
 			File.WriteAllText(_jsonFile, json);
 		}
-		public void LoadJson()
+        public void SaveOriginalText()
+        {
+			var txt = Resources.WhatsApp_Chat_with_KaraSell;
+            File.WriteAllText(@"WhatsApp Chat With Sample.txt", txt);
+        }
+        public void LoadJson()
 		{
 			string json = File.ReadAllText(_jsonFile);
 			var posts = JsonSerializer.Deserialize<Post[]>(json)!;
