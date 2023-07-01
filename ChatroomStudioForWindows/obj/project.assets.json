@@ -913,7 +913,7 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
-      "waksworks.crslib/2.0.0": {
+      "waksworks.crslib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -2219,7 +2219,7 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "waksworks.crslib/2.0.0": {
+    "waksworks.crslib/1.0.0": {
       "type": "project",
       "path": "../cnua.netcore6.crslib/cnua.netcore6.crslib.csproj",
       "msbuildProject": "../cnua.netcore6.crslib/cnua.netcore6.crslib.csproj"
@@ -2228,7 +2228,7 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "System.Speech >= 7.0.0",
-      "waksworks.crslib >= 2.0.0"
+      "waksworks.crslib >= 1.0.0"
     ]
   },
   "packageFolders": {
